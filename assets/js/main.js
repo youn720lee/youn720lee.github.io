@@ -117,47 +117,6 @@
     onScroll();
   }
 
-  /* -------------------------------------------------------- cite dialog */
-  dialog = $('#cite-dialog');
-  var citeText = $('#cite-text');
-  var citePaper = $('#cite-paper');
-  var copyBtn = $('#cite-copy');
-  var closeBtn = $('#cite-close');
-
-  function openCite(bibId, title) {
-    var src = document.getElementById(bibId);
-    if (!src || !dialog) { return; }
-    citeText.textContent = src.textContent;
-    citePaper.textContent = title || '';
-    if (copyBtn) { copyBtn.querySelector('span').textContent = 'Copy BibTeX'; }
-    if (typeof dialog.showModal === 'function') { dialog.showModal(); } else { dialog.setAttribute('open', ''); }
-  }
-  function closeCite() { if (!dialog) { return; } if (typeof dialog.close === 'function') { dialog.close(); } else { dialog.removeAttribute('open'); } }
-
-  $$('.btn-cite').forEach(function (b) {
-    b.addEventListener('click', function () { openCite(b.dataset.bib, b.dataset.title); });
-  });
-  if (closeBtn) { closeBtn.addEventListener('click', closeCite); }
-  if (dialog) {
-    dialog.addEventListener('click', function (e) { if (e.target === dialog) { closeCite(); } });
-  }
-  if (copyBtn) {
-    copyBtn.addEventListener('click', function () {
-      var text = citeText.textContent;
-      var done = function () { copyBtn.querySelector('span').textContent = 'Copied!'; setTimeout(function () { copyBtn.querySelector('span').textContent = 'Copy BibTeX'; }, 1600); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
-      } else { fallbackCopy(text); done(); }
-    });
-  }
-  function fallbackCopy(text) {
-    var ta = document.createElement('textarea');
-    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); } catch (e) { /* ignore */ }
-    document.body.removeChild(ta);
-  }
-
   /* --------------------------------------------- active nav highlighting */
   var sections = $$('main section[id]');
   var links = $$('.nav-links a[href^="#"]');
