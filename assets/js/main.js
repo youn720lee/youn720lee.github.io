@@ -43,7 +43,7 @@
     var terms = q ? q.split(/\s+/) : [];
     var shown = 0;
     pubs.forEach(function (p) {
-      var okType = activeFilter === 'all' || (activeFilter === 'selected' ? p.dataset.selected === '1' : p.dataset.type === activeFilter);
+      var okType = activeFilter === 'all' || p.dataset.type === activeFilter;
       var hay = p.dataset.search || '';
       var okSearch = terms.every(function (t) { return hay.indexOf(t) !== -1; });
       var visible = okType && okSearch;
