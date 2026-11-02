@@ -16,7 +16,7 @@ avatar: assets/img/avatar.jpg             # square photo; avatar.svg is the fall
 cv: ""                                    # e.g. assets/cv/Younkwan_Lee_CV.pdf
 site_url: https://youn720lee.github.io
 site_title: Younkwan Lee
-tagline: Vision foundation models and embodied recognition for industrial AI.
+tagline: Industrial AI for a self-evolving dark factory, built on foundation models.
 
 links:
   scholar: https://scholar.google.com/citations?user=AzAVHUQAAAAJ
@@ -26,9 +26,11 @@ links:
 
 bio:
   - >-
-    I am a Staff Engineer in the AI Inspection Technology Group at Samsung Electronics, working on
-    <strong>Vision Foundation Models (VFM)</strong> and <strong>Embodied Recognition Models (ER)</strong>
-    for manufacturing visual inspection, from visual grounding and anomaly detection to production deployment.
+    My research and development aim at industrial AI for a self-evolving dark factory, where manufacturing
+    systems learn from their own data with little human supervision. In the AI Inspection Technology Group at
+    Samsung Electronics, I work on <strong>Vision Foundation Models (VFM)</strong> and
+    <strong>Embodied Recognition Models (ER)</strong> for visual inspection, from visual grounding and anomaly
+    detection to production deployment.
   - >-
     I received my Ph.D. from GIST in 2022 under Prof. Moongu Jeon, studying robust visual perception
     under adverse conditions.
