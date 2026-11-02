@@ -31,6 +31,7 @@
   }
 
   /* ------------------------------------------------- publication filtering */
+  var dialog = null;
   var pubs = $$('.pub');
   var groups = $$('.year-group');
   var filters = $$('.filter');
@@ -55,6 +56,15 @@
       g.classList.toggle('is-hidden', !any);
     });
     if (empty) { empty.hidden = shown !== 0; }
+    var emptyQ = $('#pub-empty-q');
+    if (emptyQ) { emptyQ.textContent = q ? '"' + (search.value || '').trim() + '"' : 'the current filter'; }
+    var countEl = $('#pub-count');
+    if (countEl) {
+      var label = activeFilter === 'all' ? 'publications' : activeFilter + ' papers';
+      countEl.textContent = (shown === pubs.length ? 'Showing all ' : 'Showing ' + shown + ' of ') + pubs.length + ' ' + (shown === pubs.length ? 'publications' : label) + (q ? ' matching "' + (search.value || '').trim() + '"' : '');
+    }
+    var clearBtn = $('#pub-clear');
+    if (clearBtn) { clearBtn.hidden = !q; }
   }
 
   filters.forEach(function (btn) {
@@ -66,9 +76,37 @@
     });
   });
   if (search) { search.addEventListener('input', applyFilters); }
+  function resetSearch() {
+    if (search) { search.value = ''; }
+    filters.forEach(function (b) { b.classList.toggle('is-active', b.dataset.filter === 'all'); });
+    activeFilter = 'all';
+    applyFilters();
+    if (search) { search.focus(); }
+  }
+  var clearBtn = $('#pub-clear');
+  if (clearBtn) { clearBtn.addEventListener('click', function () { if (search) { search.value = ''; } applyFilters(); if (search) { search.focus(); } }); }
+  var resetBtn = $('#pub-reset');
+  if (resetBtn) { resetBtn.addEventListener('click', resetSearch); }
+  // "/" focuses the publication search from anywhere on the page.
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && search && !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName) && !(dialog && dialog.open)) {
+      e.preventDefault();
+      search.scrollIntoView({ block: 'center' });
+      search.focus();
+    }
+    if (e.key === 'Escape' && document.activeElement === search) { search.blur(); }
+  });
+
+  /* ---------------------------------------------------------- back to top */
+  var toTop = $('#to-top');
+  if (toTop) {
+    var onScroll = function () { toTop.classList.toggle('is-visible', window.scrollY > 700); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
   /* -------------------------------------------------------- cite dialog */
-  var dialog = $('#cite-dialog');
+  dialog = $('#cite-dialog');
   var citeText = $('#cite-text');
   var citePaper = $('#cite-paper');
   var copyBtn = $('#cite-copy');
@@ -118,7 +156,7 @@
         if (en.isIntersecting) { current = en.target.id; }
       });
       links.forEach(function (a) { a.classList.toggle('is-active', a.getAttribute('href') === '#' + current); });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
     sections.forEach(function (s) { io.observe(s); });
   }
 })();

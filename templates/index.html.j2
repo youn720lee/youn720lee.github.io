@@ -47,6 +47,7 @@
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
   <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
   <symbol id="i-bib" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
 </svg>
 
@@ -60,7 +61,7 @@
       <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
       <a href="#awards">Awards</a>
-      <a href="#activities">Activities</a>
+      <a href="#activities">Talks &amp; Service</a>
       <a href="#patents">Patents</a>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <svg class="icon sun"><use href="#i-sun"/></svg><svg class="icon moon"><use href="#i-moon"/></svg>
@@ -81,7 +82,7 @@
         <p class="org"><a href="{{ profile.org_url }}" target="_blank" rel="noopener">{{ profile.org }}</a></p>
         <p class="group">{{ profile.group }}</p>
         <ul class="social">
-          {% if profile.email %}<li><a class="social-mail" href="mailto:{{ profile.email }}" title="Email"><svg class="icon"><use href="#i-mail"/></svg><span>Email</span></a></li>{% endif %}
+          {% if profile.email %}<li><a class="social-mail is-primary" href="mailto:{{ profile.email }}" title="Send me an email"><svg class="icon"><use href="#i-mail"/></svg><span>Email</span></a></li>{% endif %}
           {% if L.scholar %}<li><a class="social-scholar" href="{{ L.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><svg class="icon"><use href="#i-scholar"/></svg><span>Google Scholar</span></a></li>{% endif %}
           {% if L.github %}<li><a class="social-github" href="{{ L.github }}" target="_blank" rel="noopener" title="GitHub"><svg class="icon"><use href="#i-github"/></svg><span>GitHub</span></a></li>{% endif %}
           {% if L.linkedin %}<li><a class="social-linkedin" href="{{ L.linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a></li>{% endif %}
@@ -90,10 +91,16 @@
         </ul>
         {% if profile.email %}<p class="email"><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>{% endif %}
         {% if profile.email_alt %}<p class="email"><a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a></p>{% endif %}
+        {% if profile.stats %}
+        <ul class="stats" title="{{ profile.stats_note }}">
+          {% for st in profile.stats %}<li><span class="stat-value">{{ st.value }}</span><span class="stat-label">{{ st.label }}</span></li>{% endfor %}
+        </ul>
+        {% endif %}
       </aside>
 
       <div class="about-body">
         <h2 class="h2">Biography</h2>
+        {% if profile.tagline %}<p class="lead">{{ profile.tagline }}</p>{% endif %}
         {% for para in profile.bio %}
         <p class="bio">{{ para | safe }}</p>
         {% endfor %}
@@ -192,18 +199,18 @@
       <div class="pub-header">
         <h2 class="h2">Publications</h2>
         <div class="pub-tools">
-          <label class="search"><svg class="icon"><use href="#i-search"/></svg><input id="pub-search" type="search" placeholder="Search title, author, venue…" aria-label="Search publications"></label>
-          <a class="btn btn-ghost" href="assets/publications.bib" download><svg class="icon"><use href="#i-bib"/></svg>BibTeX</a>
+          <label class="search"><svg class="icon"><use href="#i-search"/></svg><input id="pub-search" type="search" placeholder="Search title, author, venue…" aria-label="Search publications" autocomplete="off"><kbd class="kbd" aria-hidden="true">/</kbd><button type="button" class="search-clear" id="pub-clear" aria-label="Clear search" hidden><svg class="icon"><use href="#i-x"/></svg></button></label>
+          <a class="btn btn-ghost" href="assets/publications.bib" download title="Download all entries as BibTeX"><svg class="icon"><use href="#i-bib"/></svg>BibTeX</a>
         </div>
       </div>
       <div class="filters" role="tablist" aria-label="Filter publications">
-        <button class="filter is-active" data-filter="all">All <span class="count">{{ counts.all }}</span></button>
+        <button class="filter is-active" data-filter="all" title="Show every international publication">All <span class="count">{{ counts.all }}</span></button>
         <button class="filter" data-filter="conference">Conference <span class="count">{{ counts.conference }}</span></button>
         <button class="filter" data-filter="workshop">Workshop <span class="count">{{ counts.workshop }}</span></button>
         <button class="filter" data-filter="journal">Journal <span class="count">{{ counts.journal }}</span></button>
         <button class="filter" data-filter="preprint">Preprint <span class="count">{{ counts.preprint }}</span></button>
       </div>
-      <p class="pub-note"><strong>{{ self_name }}</strong> is shown in bold. Citation counts and the full list are on <a href="{{ L.scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+      <p class="pub-count" id="pub-count" aria-live="polite">Showing all {{ counts.all }} publications</p>
 
       <div id="pub-list">
       {% for yg in years %}
@@ -240,7 +247,10 @@
         </div>
       {% endfor %}
       </div>
-      <p class="empty" id="pub-empty" hidden>No publications match your search.</p>
+      <div class="empty" id="pub-empty" hidden>
+        <p>No publications match <strong id="pub-empty-q"></strong>. Try a shorter keyword, an author name, or a venue such as <em>ICRA</em>.</p>
+        <button type="button" class="btn btn-primary" id="pub-reset">Show all publications</button>
+      </div>
 
       {% if domestic %}
       <details class="domestic">
@@ -284,7 +294,7 @@
   <!-- ======================= ACTIVITIES ======================= -->
   <section id="activities" class="section section-alt">
     <div class="container">
-      <h2 class="h2">Activities</h2>
+      <h2 class="h2">Talks &amp; Service</h2>
       <div class="activities">
         {% if act.talks %}
         <div class="act-block">
@@ -333,6 +343,9 @@
 </main>
 
 <footer class="footer">
+  <div class="container footer-contact">
+    <p class="footer-cta">Interested in vision foundation models for manufacturing? <a href="mailto:{{ profile.email }}">Get in touch</a>.</p>
+  </div>
   <div class="container footer-inner">
     <span>© {{ year_now }} {{ profile.name }}. Last updated {{ updated }}.</span>
     <span class="footer-links">
@@ -343,6 +356,8 @@
     </span>
   </div>
 </footer>
+
+<a href="#top" class="to-top" id="to-top" aria-label="Back to top" title="Back to top"><svg class="icon"><use href="#i-up"/></svg></a>
 
 <dialog id="cite-dialog" class="cite-dialog" aria-labelledby="cite-title">
   <div class="cite-head">
