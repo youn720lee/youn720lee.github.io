@@ -67,6 +67,17 @@ def venue_html(venue: str) -> str:
     return _ACR_RE.sub(_wrap, esc)
 
 
+KNOWN_ACRONYMS = {"CVPR", "ICCV", "ECCV", "WACV", "ICRA", "RA-L", "T-ITS", "T-NNLS", "PRL", "ICIP", "AVSS", "IV",
+                  "VISAPP", "ECCVW", "ICCVW", "IROS", "NeurIPS", "ICLR", "ICML", "AAAI", "TPAMI", "IJCV"}
+
+
+def note_html(note: str) -> str:
+    """Escape a free-text note and emphasise known venue acronyms (with an optional year), e.g. 'ICRA 2022'."""
+    esc = html.escape(note)
+    pat = re.compile(r"\b(" + "|".join(re.escape(a) for a in sorted(KNOWN_ACRONYMS, key=len, reverse=True)) + r")(\s\d{4})?\b")
+    return pat.sub(lambda m: f'<strong class="acr">{m.group(0)}</strong>', esc)
+
+
 PALETTE = [
     ("#1e3a8a", "#3b82f6"), ("#0f766e", "#14b8a6"), ("#7c2d12", "#fb923c"),
     ("#4c1d95", "#8b5cf6"), ("#065f46", "#10b981"), ("#831843", "#ec4899"),
@@ -163,6 +174,7 @@ def main() -> None:
         p["is_first_author"] = bool(p["authors"]) and p["authors"][0] == self_name
         p["bibtex"] = bibtex(p)
         p["venue_html"] = venue_html(p["venue"])
+        p["note_html"] = note_html(p["note"]) if p.get("note") else ""
         if not p.get("image"):
             # Use assets/pubs/<key>.(jpg|png|webp|gif) when present, otherwise a venue tile.
             for ext in ("jpg", "jpeg", "png", "webp", "gif"):

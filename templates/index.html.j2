@@ -222,7 +222,7 @@
               </p>
               <p class="pub-venue">
                 <span class="venue">{{ p.venue_html | safe }}</span>{% if p.volume %}, vol. {{ p.volume }}{% endif %}{% if p.number %}, no. {{ p.number }}{% endif %}{% if p.pages %}, pp. {{ p.pages }}{% endif %}, {{ p.year }}.
-                {% if p.note %}<span class="pub-extra">{{ p.note }}.</span>{% endif %}
+                {% if p.note %}<span class="pub-extra">{{ p.note_html | safe }}.</span>{% endif %}
               </p>
               <div class="pub-meta">
                 <span class="type type-{{ p.type }}">{{ p.type_label }}</span>
