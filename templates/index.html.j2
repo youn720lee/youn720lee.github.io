@@ -206,8 +206,7 @@
                 {% for a in p.authors %}{% if a == self_name %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}
               </p>
               <p class="pub-venue">
-                <span class="venue">{{ p.venue_html | safe }}</span>{% if p.volume %}, vol. {{ p.volume }}{% endif %}{% if p.number %}, no. {{ p.number }}{% endif %}{% if p.pages %}, pp. {{ p.pages }}{% endif %}, {{ p.year }}.
-                {% if p.note %}<span class="pub-extra">{{ p.note_html | safe }}.</span>{% endif %}
+                <span class="venue">{{ p.venue_html | safe }}</span>{% if p.note %} <span class="pub-extra">{{ p.note_html | safe }}</span>{% endif %}{% if p.volume %}, vol. {{ p.volume }}{% endif %}{% if p.number %}, no. {{ p.number }}{% endif %}{% if p.pages %}, pp. {{ p.pages }}{% endif %}{% if not p.note %}, {{ p.year }}{% endif %}.
               </p>
               <div class="pub-foot">
                 <div class="pub-meta">
