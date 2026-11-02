@@ -28,9 +28,9 @@ bio:
   - >-
     I am a Staff Engineer in the AI Inspection Technology Group at Samsung Electronics
     (Global Technology Research), where my work centers on <strong>Vision Foundation Models (VFM)</strong>
-    for manufacturing visual inspection. This spans foundation-model-based inspection platforms,
-    anomaly and defect detection under limited data, and the data and model infrastructure that brings
-    these models to production lines.
+    and <strong>Embodied Recognition Models (ER)</strong> for manufacturing visual inspection. This spans
+    foundation-model-based inspection platforms, visual grounding and anomaly detection under limited data,
+    and the data and model infrastructure that brings these models to production lines.
   - >-
     I received my Ph.D. in Electrical Engineering and Computer Science from the Gwangju Institute of
     Science and Technology (GIST) in 2022, advised by Prof. Moongu Jeon. My doctoral research focused on
@@ -38,11 +38,11 @@ bio:
     noise, occlusion, and dataset bias.
 
 interests:
-  - Vision Foundation Models for Industrial Inspection
+  - Vision Foundation Models for Industrial AI
+  - Embodied Recognition for Inspection Robots
+  - Visual Grounding & Open-vocabulary Detection
   - Anomaly Detection & Defect Recognition
-  - Few-shot and Open-vocabulary Object Detection
-  - Robust Visual Perception under Degradation
-  - Knowledge Distillation & Efficient Vision Models
+  - Robust Perception & Efficient Vision Models
 
 education:
   - degree: Ph.D. in Electrical Engineering and Computer Science

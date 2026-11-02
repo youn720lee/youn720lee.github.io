@@ -122,7 +122,7 @@
   selected: true
   note: Also presented at ICRA 2022
   links:
-    paper: https://ieeexplore.ieee.org/document/9722965
+    doi: https://doi.org/10.1109/LRA.2022.3154830
 
 - key: lee2022lpd
   title: License Plate Detection via Information Maximization
@@ -299,6 +299,7 @@
   pages: 1414–1419
   links:
     doi: https://doi.org/10.1109/IVS.2019.8814057
+    arxiv: https://arxiv.org/abs/1910.04326
 
 - key: lee2019practical
   title: Practical License Plate Recognition in Unconstrained Surveillance Systems with Adversarial Super-Resolution
