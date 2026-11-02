@@ -113,8 +113,8 @@
               <li>
                 <svg class="icon"><use href="#i-grad"/></svg>
                 <div>
-                  <div class="edu-degree">{{ e.degree }}{% if e.year %}, {{ e.year }}{% endif %}</div>
-                  <div class="edu-inst">{{ e.institution }}</div>
+                  <div class="edu-degree">{{ e.degree }}</div>
+                  <div class="edu-inst">{{ e.institution }}{% if e.period %} · {{ e.period }}{% elif e.year %} · {{ e.year }}{% endif %}</div>
                   {% if e.note %}<div class="edu-note">{{ e.note }}</div>{% endif %}
                 </div>
               </li>
