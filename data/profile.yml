@@ -101,42 +101,48 @@ news:
 awards:
   - year: 2026
     title: Annual Award, AI Inspection Technology Group
-    by: Samsung Electronics
+    by: Samsung Electronics · Oct 2026
     note: Development of the DX AI Vision Platform Data Agent
   - year: 2026
     title: Outstanding Reviewer
-    by: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)
+    by: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026) · Jun 2026
     link: assets/img/cvpr2026-outstanding-reviewer.jpg
   - year: 2025
     title: Samsung Best Paper Awards (SBPA) — Honorable Mention
-    by: Samsung Electronics
+    by: Samsung Electronics · 2025
     note: "HDO: Hierarchical Defect Ontology for Vision Inspection"
   - year: 2024
     title: Samsung IT Innovation Awards (SIIA) — Grand Prize
-    by: Samsung Group (group-wide competition)
+    by: Samsung Group (group-wide competition) · Oct 2024
     note: Project representative, Vision Inspection Foundation Model
   - year: 2024
     title: Best Paper Runner-Up Award
-    by: IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS 2024)
+    by: IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS 2024) · Jul 2024
     note: Self-Supervised Industrial Image Generation for Defect Recognition Under Limited Data
     link: assets/img/avss2024-best-paper-runner-up.jpg
+  - year: 2022
+    title: Excellent Research Award (ETRI President's Award)
+    by: Electronics and Telecommunications Research Institute (ETRI) · Feb 2022
+  - year: 2021
+    title: Excellence Paper Prize
+    by: Korea Computer Congress (KCC 2021) · Jul 2021
   - year: 2020
     title: Best Student Paper Award
     by: IEEE Intelligent Vehicles Symposium (IV 2020)
     note: Context-Aware Multi-Task Learning for Traffic Scene Recognition in Autonomous Vehicles
   - year: 2020
     title: Excellence Paper Prize
-    by: Korea Computer Congress (KCC 2020)
+    by: Korea Computer Congress (KCC 2020) · Mar 2020
   - year: 2019
     title: Outstanding Paper Award
-    by: RLQ Workshop at ICCV 2019
+    by: RLQ Workshop at ICCV 2019 · Oct 2019
     note: "SNIDER: Single Noisy Image Denoising and Rectification for Improving License Plate Recognition"
   - year: 2019
-    title: Excellence Paper Prize
-    by: School of EECS, GIST
+    title: Outstanding Paper Award
+    by: Gwangju Institute of Science and Technology (GIST) · Jan 2019
   - year: 2017
     title: Excellence Paper Prize
-    by: Korea Software Congress (KSC 2017)
+    by: Korea Software Congress (KSC 2017) · Dec 2017
   - year: 2016–2022
     title: Korean Government Scholarship (M.S./Ph.D.)
     by: Government of the Republic of Korea
