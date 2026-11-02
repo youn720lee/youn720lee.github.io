@@ -120,7 +120,7 @@ button { font: inherit; color: inherit; }
   width: 220px; height: 220px; border-radius: 50%; object-fit: cover; margin: 0 auto 18px;
   box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px var(--line), var(--shadow);
 }
-.name { font-size: 1.65rem; font-weight: 800; }
+.name { font-size: 1.65rem; font-weight: 800; margin-bottom: 10px; }
 .name-native { color: var(--muted); margin: 2px 0 10px; font-weight: 500; }
 .role { font-weight: 600; color: var(--fg-soft); margin: 0 0 2px; }
 .role .at { color: var(--muted); font-weight: 500; }
