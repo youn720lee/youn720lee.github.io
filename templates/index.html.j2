@@ -140,8 +140,8 @@
             </div>
             <div class="tl-org">{{ x.org }}{% if x.location %} <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>{{ x.location }}</span>{% endif %}</div>
             {% if x.bullets %}
-            <details class="tl-details">
-              <summary>Details</summary>
+            <details class="disclosure">
+              <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
               <ul class="tl-bullets">{% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
             </details>
             {% endif %}
@@ -242,18 +242,22 @@
   <section id="projects" class="section section-alt">
     <div class="container">
       <h2 class="h2">Industry Projects</h2>
-      <p class="section-lead">R&amp;D programmes I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
-      <div class="projects">
+      <p class="section-lead">R&amp;D programs I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
+      <div class="proj-list">
         {% for pj in projects %}
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">{{ pj.title }}</h3>
-            <span class="chip chip-period">{{ pj.period }}</span>
+        <article class="proj">
+          <div class="proj-head">
+            <h3 class="proj-title">{{ pj.title }}</h3>
+            <span class="proj-period">{{ pj.period }}</span>
           </div>
-          {% if pj.role %}<div class="project-role">{{ pj.role }}</div>{% endif %}
-          <p class="project-summary">{{ pj.summary }}</p>
-          {% if pj.bullets %}<ul class="project-bullets">{% for b in pj.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
-          {% if pj.tags %}<div class="tags">{% for t in pj.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+          <p class="proj-summary">{{ pj.summary }}</p>
+          {% if pj.bullets or pj.tags %}
+          <details class="disclosure">
+            <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+            {% if pj.bullets %}<ul class="proj-bullets">{% for b in pj.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+            {% if pj.tags %}<div class="tags">{% for t in pj.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+          </details>
+          {% endif %}
         </article>
         {% endfor %}
       </div>

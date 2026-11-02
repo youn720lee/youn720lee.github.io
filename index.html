@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=37e1a778">
+  <link rel="stylesheet" href="assets/css/style.css?v=a1c6457f">
   <script>
     // Apply the saved theme before first paint to avoid a flash.
     (function () { try { var t = localStorage.getItem('theme'); if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {} })();
@@ -121,8 +121,8 @@
               <span class="tl-dates">Jan 2026 – Present</span>
             </div>
             <div class="tl-org">Samsung Electronics — AI Inspection Technology Group, Global Technology Research (GTR) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Suwon, Korea</span></div>
-            <details class="tl-details">
-              <summary>Details</summary>
+            <details class="disclosure">
+              <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
               <ul class="tl-bullets"><li>Vision Foundation Model (VFM) research for manufacturing visual inspection (Smart Factory Vision).</li><li>DX AI Vision Platform and its data agent for deploying inspection models across production lines.</li></ul>
             </details>
           </div>
@@ -135,8 +135,8 @@
               <span class="tl-dates">Mar 2022 – Dec 2025</span>
             </div>
             <div class="tl-org">Samsung Electronics — Factory Automation Technology Group, Global Technology Research (GTR) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Suwon, Korea</span></div>
-            <details class="tl-details">
-              <summary>Details</summary>
+            <details class="disclosure">
+              <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
               <ul class="tl-bullets"><li>Foundation-model-based vision inspection technology (Samsung IT Innovation Awards Grand Prize, 2024).</li></ul>
             </details>
           </div>
@@ -635,50 +635,68 @@ Quang Vinh Dinh, <strong>Younkwan Lee</strong>, Hyunguk Choi, Moongu Jeon       
   <section id="projects" class="section section-alt">
     <div class="container">
       <h2 class="h2">Industry Projects</h2>
-      <p class="section-lead">R&amp;D programmes I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
-      <div class="projects">
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">Vision Foundation Model for AI Inspection</h3>
-            <span class="chip chip-period">Apr 2026 – Dec 2026</span>
+      <p class="section-lead">R&amp;D programs I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
+      <div class="proj-list">
+        <article class="proj">
+          <div class="proj-head">
+            <h3 class="proj-title">Vision Foundation Model for AI Inspection</h3>
+            <span class="proj-period">Apr 2026 – Dec 2026</span>
           </div>
-          <p class="project-summary">A manufacturing-inspection foundation model that unifies external and in-house AI through grounding, trained on large-scale internal data.</p>
-<ul class="project-bullets"><li>Co-training of the VFM with LLM/VLM components for agentic inspection workflows.</li><li>Selectable inference modes — VFM only, instruction-conditioned, and post-hoc explanation.</li><li>Inspection data curated into reusable AI assets for domain specificity.</li></ul><div class="tags"><span class="tag">Vision Foundation Model</span><span class="tag">Grounding</span><span class="tag">VLM</span><span class="tag">Agentic AI</span></div>        </article>
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">Re-inspection Automation Linked to AI Inspection Results</h3>
-            <span class="chip chip-period">Feb 2026 – Nov 2026</span>
+          <p class="proj-summary">Foundation model for manufacturing inspection that unifies external and in-house AI through grounding.</p>
+          <details class="disclosure">
+            <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+<ul class="proj-bullets"><li>Co-training of the VFM with LLM/VLM components for agentic inspection workflows.</li><li>Selectable inference modes: VFM only, instruction-conditioned, and post-hoc explanation.</li><li>Inspection data curated into reusable AI assets for domain specificity.</li></ul><div class="tags"><span class="tag">Vision Foundation Model</span><span class="tag">Grounding</span><span class="tag">VLM</span><span class="tag">Agentic AI</span></div>          </details>
+        </article>
+        <article class="proj">
+          <div class="proj-head">
+            <h3 class="proj-title">Re-inspection Automation Linked to AI Inspection Results</h3>
+            <span class="proj-period">Feb 2026 – Nov 2026</span>
           </div>
-          <p class="project-summary">Robot-based re-inspection that imitates how inspectors manipulate a product and change viewing conditions to confirm suspected defects.</p>
-<ul class="project-bullets"><li>Target observation poses and robot motions generated from AI inspection results.</li><li>Pairwise-ranking model that prioritises viewing angles and positions per defect type.</li><li>Multi-DOF hardware module for product manipulation under variable lighting and viewpoints.</li></ul><div class="tags"><span class="tag">Robotics</span><span class="tag">Active Vision</span><span class="tag">Pairwise Ranking</span><span class="tag">Smart Factory</span></div>        </article>
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">DX AI Vision Platform Advancement</h3>
-            <span class="chip chip-period">Dec 2025 – Oct 2026</span>
+          <p class="proj-summary">Robotic re-inspection that imitates how inspectors handle a product to confirm suspected defects.</p>
+          <details class="disclosure">
+            <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+<ul class="proj-bullets"><li>Target observation poses and robot motions generated from AI inspection results.</li><li>Pairwise-ranking model that prioritizes viewing angles and positions per defect type.</li><li>Multi-DOF hardware module for product manipulation under variable lighting and viewpoints.</li></ul><div class="tags"><span class="tag">Robotics</span><span class="tag">Active Vision</span><span class="tag">Pairwise Ranking</span><span class="tag">Smart Factory</span></div>          </details>
+        </article>
+        <article class="proj">
+          <div class="proj-head">
+            <h3 class="proj-title">DX AI Vision Platform Advancement</h3>
+            <span class="proj-period">Dec 2025 – Oct 2026</span>
           </div>
-          <p class="project-summary">Expanding the AI vision inspection platform into the DX-division standard platform with cloud infrastructure, data analytics, and AI agents.</p>
-<ul class="project-bullets"><li>Cloud-based infrastructure for large-scale inspection data and data-driven decision support.</li><li>AI agent that makes the VFM usable by field engineers (Data Agent — group Annual Award, 2026).</li><li>Extension to external sites such as package-damage inspection at logistics centres, with per-site MLOps.</li></ul><div class="tags"><span class="tag">MLOps</span><span class="tag">Cloud</span><span class="tag">AI Agent</span><span class="tag">Data Platform</span></div>        </article>
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">Cloud-based Inspection Quality AI Service</h3>
-            <span class="chip chip-period">Dec 2024 – Dec 2025</span>
+          <p class="proj-summary">Extending the AI vision inspection platform into the DX standard platform with cloud services and AI agents.</p>
+          <details class="disclosure">
+            <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+<ul class="proj-bullets"><li>Cloud-based infrastructure for large-scale inspection data and data-driven decision support.</li><li>AI agent that makes the VFM usable by field engineers (Data Agent, group Annual Award 2026).</li><li>Extension to external sites such as package-damage inspection at logistics centers, with per-site MLOps.</li></ul><div class="tags"><span class="tag">MLOps</span><span class="tag">Cloud</span><span class="tag">AI Agent</span><span class="tag">Data Platform</span></div>          </details>
+        </article>
+        <article class="proj">
+          <div class="proj-head">
+            <h3 class="proj-title">Cloud-based Inspection Quality AI Service</h3>
+            <span class="proj-period">Dec 2024 – Dec 2025</span>
           </div>
-          <p class="project-summary">An MLOps service for deploying, operating, and maintaining deep-learning vision inspection in the field on Samsung SDS cloud services.</p>
-<ul class="project-bullets"><li>Cloud-native AI service — load balancer, MLOps platform, and Kubernetes engine.</li><li>Vision–text foundation model and generative AI for inspection.</li><li>Few-shot customisation of inspection models from small data (industry–academia collaboration).</li></ul><div class="tags"><span class="tag">MLOps</span><span class="tag">Kubernetes</span><span class="tag">Vision–Language Model</span><span class="tag">Few-shot</span></div>        </article>
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">MLOps AI Technology for Intelligent Inspection</h3>
-            <span class="chip chip-period">Mar 2023 – Jan 2024</span>
+          <p class="proj-summary">Cloud MLOps service for deploying and maintaining deep-learning vision inspection in the field.</p>
+          <details class="disclosure">
+            <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+<ul class="proj-bullets"><li>Cloud-native AI service built on a load balancer, an MLOps platform, and a Kubernetes engine.</li><li>Vision–text foundation model and generative AI for inspection.</li><li>Few-shot customization of inspection models from small data (industry–academia collaboration).</li></ul><div class="tags"><span class="tag">MLOps</span><span class="tag">Kubernetes</span><span class="tag">Vision–Language Model</span><span class="tag">Few-shot</span></div>          </details>
+        </article>
+        <article class="proj">
+          <div class="proj-head">
+            <h3 class="proj-title">MLOps AI Technology for Intelligent Inspection</h3>
+            <span class="proj-period">Mar 2023 – Jan 2024</span>
           </div>
-          <p class="project-summary">A systematic MLOps-based solution for keeping DX product-inspection AI models performant with minimal manual effort.</p>
-<ul class="project-bullets"><li>Data cleansing and automatic discovery of new defect types to cut data-management effort.</li><li>Product-specific model generation and lifelong learning to shorten training and validation cycles.</li><li>Open-set model updates and edge deployment/monitoring with less engineer intervention.</li></ul><div class="tags"><span class="tag">MLOps</span><span class="tag">Lifelong Learning</span><span class="tag">Open-set Recognition</span><span class="tag">Edge Deployment</span></div>        </article>
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">TV Exterior Inspection System</h3>
-            <span class="chip chip-period">Jul 2022 – Nov 2022</span>
+          <p class="proj-summary">MLOps solution that keeps product-inspection models performant with minimal manual effort.</p>
+          <details class="disclosure">
+            <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+<ul class="proj-bullets"><li>Data cleansing and automatic discovery of new defect types to cut data-management effort.</li><li>Product-specific model generation and lifelong learning to shorten training and validation cycles.</li><li>Open-set model updates and edge deployment and monitoring with less engineer intervention.</li></ul><div class="tags"><span class="tag">MLOps</span><span class="tag">Lifelong Learning</span><span class="tag">Open-set Recognition</span><span class="tag">Edge Deployment</span></div>          </details>
+        </article>
+        <article class="proj">
+          <div class="proj-head">
+            <h3 class="proj-title">TV Exterior Inspection System</h3>
+            <span class="proj-period">Jul 2022 – Nov 2022</span>
           </div>
-          <p class="project-summary">Deep-learning exterior inspection for large-size TVs to reduce cosmetic defects in the field.</p>
-<ul class="project-bullets"><li>Gap/step inspection system installed and verified on a pilot production line.</li><li>Rear-cover inspection — high-resolution tiling, candidate detection, and false-call removal by classification.</li></ul><div class="tags"><span class="tag">Defect Detection</span><span class="tag">Deep Learning</span><span class="tag">Production Deployment</span></div>        </article>
+          <p class="proj-summary">Deep-learning exterior inspection for large-size TVs to reduce cosmetic defects.</p>
+          <details class="disclosure">
+            <summary><span class="when-closed">Show more</span><span class="when-open">Show less</span></summary>
+<ul class="proj-bullets"><li>Gap and step inspection system installed and verified on a pilot production line.</li><li>Rear-cover inspection with high-resolution tiling, candidate detection, and false-call removal by classification.</li></ul><div class="tags"><span class="tag">Defect Detection</span><span class="tag">Deep Learning</span><span class="tag">Production Deployment</span></div>          </details>
+        </article>
       </div>
     </div>
   </section>

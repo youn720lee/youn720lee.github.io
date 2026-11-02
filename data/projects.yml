@@ -1,57 +1,58 @@
 # ---------------------------------------------------------------------------
 # Industry projects (Samsung Electronics).  Newest first.
-#   title, period, summary (one line), bullets (short, 1–2 lines each), tags (list)
+#   title, period, summary (one line shown in the list),
+#   bullets + tags (shown under "Show more")
 # ---------------------------------------------------------------------------
 
 - title: Vision Foundation Model for AI Inspection
   period: Apr 2026 – Dec 2026
-  summary: A manufacturing-inspection foundation model that unifies external and in-house AI through grounding, trained on large-scale internal data.
+  summary: Foundation model for manufacturing inspection that unifies external and in-house AI through grounding.
   bullets:
     - Co-training of the VFM with LLM/VLM components for agentic inspection workflows.
-    - Selectable inference modes — VFM only, instruction-conditioned, and post-hoc explanation.
+    - "Selectable inference modes: VFM only, instruction-conditioned, and post-hoc explanation."
     - Inspection data curated into reusable AI assets for domain specificity.
   tags: [Vision Foundation Model, Grounding, VLM, Agentic AI]
 
 - title: Re-inspection Automation Linked to AI Inspection Results
   period: Feb 2026 – Nov 2026
-  summary: Robot-based re-inspection that imitates how inspectors manipulate a product and change viewing conditions to confirm suspected defects.
+  summary: Robotic re-inspection that imitates how inspectors handle a product to confirm suspected defects.
   bullets:
     - Target observation poses and robot motions generated from AI inspection results.
-    - Pairwise-ranking model that prioritises viewing angles and positions per defect type.
+    - Pairwise-ranking model that prioritizes viewing angles and positions per defect type.
     - Multi-DOF hardware module for product manipulation under variable lighting and viewpoints.
   tags: [Robotics, Active Vision, Pairwise Ranking, Smart Factory]
 
 - title: DX AI Vision Platform Advancement
   period: Dec 2025 – Oct 2026
-  summary: Expanding the AI vision inspection platform into the DX-division standard platform with cloud infrastructure, data analytics, and AI agents.
+  summary: Extending the AI vision inspection platform into the DX standard platform with cloud services and AI agents.
   bullets:
     - Cloud-based infrastructure for large-scale inspection data and data-driven decision support.
-    - AI agent that makes the VFM usable by field engineers (Data Agent — group Annual Award, 2026).
-    - Extension to external sites such as package-damage inspection at logistics centres, with per-site MLOps.
+    - AI agent that makes the VFM usable by field engineers (Data Agent, group Annual Award 2026).
+    - Extension to external sites such as package-damage inspection at logistics centers, with per-site MLOps.
   tags: [MLOps, Cloud, AI Agent, Data Platform]
 
 - title: Cloud-based Inspection Quality AI Service
   period: Dec 2024 – Dec 2025
-  summary: An MLOps service for deploying, operating, and maintaining deep-learning vision inspection in the field on Samsung SDS cloud services.
+  summary: Cloud MLOps service for deploying and maintaining deep-learning vision inspection in the field.
   bullets:
-    - Cloud-native AI service — load balancer, MLOps platform, and Kubernetes engine.
+    - Cloud-native AI service built on a load balancer, an MLOps platform, and a Kubernetes engine.
     - Vision–text foundation model and generative AI for inspection.
-    - Few-shot customisation of inspection models from small data (industry–academia collaboration).
+    - Few-shot customization of inspection models from small data (industry–academia collaboration).
   tags: [MLOps, Kubernetes, Vision–Language Model, Few-shot]
 
 - title: MLOps AI Technology for Intelligent Inspection
   period: Mar 2023 – Jan 2024
-  summary: A systematic MLOps-based solution for keeping DX product-inspection AI models performant with minimal manual effort.
+  summary: MLOps solution that keeps product-inspection models performant with minimal manual effort.
   bullets:
     - Data cleansing and automatic discovery of new defect types to cut data-management effort.
     - Product-specific model generation and lifelong learning to shorten training and validation cycles.
-    - Open-set model updates and edge deployment/monitoring with less engineer intervention.
+    - Open-set model updates and edge deployment and monitoring with less engineer intervention.
   tags: [MLOps, Lifelong Learning, Open-set Recognition, Edge Deployment]
 
 - title: TV Exterior Inspection System
   period: Jul 2022 – Nov 2022
-  summary: Deep-learning exterior inspection for large-size TVs to reduce cosmetic defects in the field.
+  summary: Deep-learning exterior inspection for large-size TVs to reduce cosmetic defects.
   bullets:
-    - Gap/step inspection system installed and verified on a pilot production line.
-    - Rear-cover inspection — high-resolution tiling, candidate detection, and false-call removal by classification.
+    - Gap and step inspection system installed and verified on a pilot production line.
+    - Rear-cover inspection with high-resolution tiling, candidate detection, and false-call removal by classification.
   tags: [Defect Detection, Deep Learning, Production Deployment]

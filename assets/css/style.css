@@ -413,13 +413,13 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 }
 
 /* Work experience details are collapsed by default. */
-.tl-details { margin-top: 3px; }
-.tl-details summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; font-size: 0.76rem; font-weight: 600; color: var(--accent-ink); padding: 2px 0; }
-.tl-details summary::-webkit-details-marker { display: none; }
-.tl-details summary::before { content: "▸"; font-size: 0.75em; transition: transform .15s ease; }
-.tl-details[open] summary::before { transform: rotate(90deg); }
-.tl-details summary:hover { text-decoration: underline; }
-.tl-details .tl-bullets { margin-top: 4px; }
+.disclosure { margin-top: 3px; }
+.disclosure summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; font-size: 0.76rem; font-weight: 600; color: var(--accent-ink); padding: 2px 0; }
+.disclosure summary::-webkit-details-marker { display: none; }
+.disclosure summary::before { content: "▸"; font-size: 0.75em; transition: transform .15s ease; }
+.disclosure[open] summary::before { transform: rotate(90deg); }
+.disclosure summary:hover { text-decoration: underline; }
+.disclosure .tl-bullets { margin-top: 4px; }
 
 /* Work experience as a single compact band. */
 #experience .h2 { font-size: 1.3rem; margin-bottom: 10px; padding-bottom: 8px; }
@@ -428,3 +428,20 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 #experience .tl-dates { font-size: 0.8rem; }
 #experience .tl-org { font-size: 0.84rem; }
 #experience .tl-bullets { font-size: 0.82rem; }
+
+/* Shared "Show more / Show less" disclosure. */
+.disclosure .when-open { display: none; }
+.disclosure[open] .when-open { display: inline; }
+.disclosure[open] .when-closed { display: none; }
+
+/* Industry projects: one compact row per project, like the publication list. */
+.proj-list { border-top: 1px solid var(--line); }
+.proj { padding: 11px 0; border-bottom: 1px solid var(--line); }
+.proj-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 16px; }
+.proj-title { font-size: 1rem; font-weight: 700; }
+.proj-period { color: var(--muted); font-size: 0.8rem; font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.proj-summary { color: var(--fg-soft); font-size: 0.88rem; margin: 1px 0 0; }
+.proj-bullets { padding-left: 18px; color: var(--fg-soft); font-size: 0.84rem; margin: 4px 0 6px; }
+.proj-bullets li { margin-bottom: 2px; }
+.proj-bullets li::marker { color: var(--accent); }
+.proj .tags { margin: 2px 0 4px; }
