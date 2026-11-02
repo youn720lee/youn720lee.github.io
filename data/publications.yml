@@ -256,7 +256,7 @@
 - key: lee2020attribute
   title: Self-Supervised Attribute-Aware Refinement Network for Low-Quality Text Recognition
   authors: [Younkwan Lee, Hyeongjun Yoo, Yechan Kim, Jihun Jeong, Moongu Jeon]
-  venue: European Conference on Computer Vision (ECCV) Workshops
+  venue: European Conference on Computer Vision Workshops (ECCVW)
   venue_short: ECCVW
   year: 2020
   type: workshop
@@ -279,7 +279,7 @@
 - key: lee2019snider
   title: "SNIDER: Single Noisy Image Denoising and Rectification for Improving License Plate Recognition"
   authors: [Younkwan Lee, Juhyun Lee, Hoyeon Ahn, Moongu Jeon]
-  venue: IEEE/CVF International Conference on Computer Vision (ICCV) Workshops
+  venue: IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)
   venue_short: ICCVW
   year: 2019
   type: workshop
