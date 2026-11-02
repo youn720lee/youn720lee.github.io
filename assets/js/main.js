@@ -97,6 +97,19 @@
     if (e.key === 'Escape' && document.activeElement === search) { search.blur(); }
   });
 
+  /* ------------------------------------------------------------- news */
+  var newsToggle = $('#news-toggle');
+  if (newsToggle) {
+    var moreItems = $$('.news-more');
+    var moreLabel = newsToggle.textContent;
+    newsToggle.addEventListener('click', function () {
+      var open = newsToggle.getAttribute('aria-expanded') === 'true';
+      moreItems.forEach(function (li) { li.hidden = open; });
+      newsToggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+      newsToggle.textContent = open ? moreLabel : 'Show less';
+    });
+  }
+
   /* ---------------------------------------------------------- back to top */
   var toTop = $('#to-top');
   if (toTop) {

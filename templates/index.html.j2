@@ -57,9 +57,9 @@
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
     <nav class="nav-links" id="nav-links">
       <a href="#about">About</a>
-      <a href="#experience">Work Experience</a>
-      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
       <a href="#awards">Awards</a>
       <a href="#activities">Talks &amp; Service</a>
       <a href="#patents">Patents</a>
@@ -78,8 +78,7 @@
         <img class="avatar" src="{{ profile.avatar }}" alt="{{ profile.name }}" width="220" height="220">
         <h1 class="name">{{ profile.name }}</h1>
         <p class="name-native">{{ profile.name_native }}</p>
-        <p class="role">{{ profile.role }}</p>
-        <p class="org"><a href="{{ profile.org_url }}" target="_blank" rel="noopener">{{ profile.org }}</a></p>
+        <p class="role">{{ profile.role }} <span class="at">@</span> <a href="{{ profile.org_url }}" target="_blank" rel="noopener">{{ profile.org }}</a></p>
         <p class="group">{{ profile.group }}</p>
         <ul class="social">
           {% if profile.email %}<li><a class="social-mail is-primary" href="mailto:{{ profile.email }}" title="Send me an email"><svg class="icon"><use href="#i-mail"/></svg><span>Email</span></a></li>{% endif %}
@@ -89,8 +88,9 @@
           {% if L.orcid %}<li><a class="social-orcid" href="{{ L.orcid }}" target="_blank" rel="noopener" title="ORCID"><svg class="icon"><use href="#i-orcid"/></svg><span>ORCID</span></a></li>{% endif %}
           {% if profile.cv %}<li><a class="social-cv" href="{{ profile.cv }}" target="_blank" rel="noopener" title="CV"><svg class="icon"><use href="#i-cv"/></svg><span>CV</span></a></li>{% endif %}
         </ul>
-        {% if profile.email %}<p class="email"><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>{% endif %}
-        {% if profile.email_alt %}<p class="email"><a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a></p>{% endif %}
+        {% if profile.email %}
+        <p class="contact"><span class="contact-label">Contact</span><a href="mailto:{{ profile.email }}">{{ profile.email }}</a>{% if profile.email_alt %}<a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a>{% endif %}</p>
+        {% endif %}
         {% if profile.stats %}
         <ul class="stats" title="{{ profile.stats_note }}">
           {% for st in profile.stats %}<li><span class="stat-value">{{ st.value }}</span><span class="stat-label">{{ st.label }}</span></li>{% endfor %}
@@ -131,8 +131,25 @@
     </div>
   </section>
 
+  {% if profile.news %}
+  <!-- ======================= NEWS ======================= -->
+  <section id="news" class="section section-compact section-alt">
+    <div class="container">
+      <h2 class="h2">News</h2>
+      <ul class="news" id="news-list">
+        {% for n in profile.news %}
+        <li{% if loop.index > 3 %} class="news-more" hidden{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text">{{ n.text | safe }}</span></li>
+        {% endfor %}
+      </ul>
+      {% if profile.news | length > 3 %}
+      <button type="button" class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="news-list">Show {{ profile.news | length - 3 }} more</button>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
   <!-- ======================= WORK EXPERIENCE ======================= -->
-  <section id="experience" class="section">
+  <section id="experience" class="section section-compact">
     <div class="container">
       <h2 class="h2">Work Experience</h2>
       <ol class="timeline">
@@ -154,44 +171,6 @@
       </ol>
     </div>
   </section>
-
-  {% if profile.news %}
-  <!-- ======================= NEWS ======================= -->
-  <section id="news" class="section section-alt">
-    <div class="container">
-      <h2 class="h2">News</h2>
-      <ul class="news">
-        {% for n in profile.news %}
-        <li><span class="news-date">{{ n.date }}</span><span class="news-text">{{ n.text | safe }}</span></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-  {% endif %}
-
-  {% if projects %}
-  <!-- ======================= PROJECTS ======================= -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="h2">Industry Projects</h2>
-      <p class="section-lead">R&amp;D programmes I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
-      <div class="projects">
-        {% for pj in projects %}
-        <article class="project">
-          <div class="project-head">
-            <h3 class="project-title">{{ pj.title }}</h3>
-            <span class="chip chip-period">{{ pj.period }}</span>
-          </div>
-          {% if pj.role %}<div class="project-role">{{ pj.role }}</div>{% endif %}
-          <p class="project-summary">{{ pj.summary }}</p>
-          {% if pj.bullets %}<ul class="project-bullets">{% for b in pj.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
-          {% if pj.tags %}<div class="tags">{% for t in pj.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  {% endif %}
 
   <!-- ======================= PUBLICATIONS ======================= -->
   <section id="publications" class="section section-alt">
@@ -231,14 +210,16 @@
                 <span class="venue">{{ p.venue_html | safe }}</span>{% if p.volume %}, vol. {{ p.volume }}{% endif %}{% if p.number %}, no. {{ p.number }}{% endif %}{% if p.pages %}, pp. {{ p.pages }}{% endif %}, {{ p.year }}.
                 {% if p.note %}<span class="pub-extra">{{ p.note_html | safe }}.</span>{% endif %}
               </p>
-              <div class="pub-meta">
-                <span class="type type-{{ p.type }}">{{ p.type_label }}</span>
-                {% for t in p.tags %}<span class="badge">{{ t }}</span>{% endfor %}
-                {% if p.award %}<span class="badge badge-award"><svg class="icon"><use href="#i-trophy"/></svg>{{ p.award }}</span>{% endif %}
-              </div>
-              <div class="pub-links">
-                {% for k, label in link_order %}{% if p.links[k] %}<a class="btn" href="{{ p.links[k] }}" target="_blank" rel="noopener">{{ label }}</a>{% endif %}{% endfor %}
-                <button class="btn btn-cite" data-bib="bib-{{ p.key }}" data-title="{{ p.title }}"><svg class="icon"><use href="#i-quote"/></svg>Cite</button>
+              <div class="pub-foot">
+                <div class="pub-meta">
+                  <span class="type type-{{ p.type }}">{{ p.type_label }}</span>
+                  {% for t in p.tags %}<span class="badge">{{ t }}</span>{% endfor %}
+                  {% if p.award %}<span class="badge badge-award"><svg class="icon"><use href="#i-trophy"/></svg>{{ p.award }}</span>{% endif %}
+                </div>
+                <div class="pub-links">
+                  {% for k, label in link_order %}{% if p.links[k] %}<a class="btn" href="{{ p.links[k] }}" target="_blank" rel="noopener">{{ label }}</a>{% endif %}{% endfor %}
+                  <button class="btn btn-cite" data-bib="bib-{{ p.key }}" data-title="{{ p.title }}"><svg class="icon"><use href="#i-quote"/></svg>Cite</button>
+                </div>
               </div>
               <pre class="bib" id="bib-{{ p.key }}" hidden>{{ p.bibtex }}</pre>
             </div>
@@ -269,9 +250,33 @@
     </div>
   </section>
 
+  {% if projects %}
+  <!-- ======================= PROJECTS ======================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="h2">Industry Projects</h2>
+      <p class="section-lead">R&amp;D programmes I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
+      <div class="projects">
+        {% for pj in projects %}
+        <article class="project">
+          <div class="project-head">
+            <h3 class="project-title">{{ pj.title }}</h3>
+            <span class="chip chip-period">{{ pj.period }}</span>
+          </div>
+          {% if pj.role %}<div class="project-role">{{ pj.role }}</div>{% endif %}
+          <p class="project-summary">{{ pj.summary }}</p>
+          {% if pj.bullets %}<ul class="project-bullets">{% for b in pj.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+          {% if pj.tags %}<div class="tags">{% for t in pj.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
   {% if profile.awards %}
   <!-- ======================= AWARDS ======================= -->
-  <section id="awards" class="section">
+  <section id="awards" class="section section-alt">
     <div class="container">
       <h2 class="h2">Awards &amp; Honors</h2>
       <ul class="awards">
@@ -292,7 +297,7 @@
   {% set act = profile.activities %}
   {% if act %}
   <!-- ======================= ACTIVITIES ======================= -->
-  <section id="activities" class="section section-alt">
+  <section id="activities" class="section">
     <div class="container">
       <h2 class="h2">Talks &amp; Service</h2>
       <div class="activities">
@@ -329,7 +334,7 @@
 
   {% if profile.patents %}
   <!-- ======================= PATENTS ======================= -->
-  <section id="patents" class="section">
+  <section id="patents" class="section section-alt">
     <div class="container">
       <h2 class="h2">Patents</h2>
       <ol class="patents">
