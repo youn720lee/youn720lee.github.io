@@ -12,7 +12,7 @@ group: AI Inspection Technology Group, Global Technology Research (GTR)
 location: Suwon, South Korea
 email: youn720.lee@samsung.com            # work (shown first)
 email_alt: tranqualize@gmail.com          # personal
-avatar: assets/img/avatar.svg             # replace with assets/img/avatar.jpg when you add a photo
+avatar: assets/img/avatar.jpg             # square photo; avatar.svg is the fallback placeholder
 cv: ""                                    # e.g. assets/cv/Younkwan_Lee_CV.pdf
 site_url: https://youn720lee.github.io
 site_title: Younkwan Lee
