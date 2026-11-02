@@ -18,16 +18,6 @@ site_url: https://youn720lee.github.io
 site_title: Younkwan Lee
 tagline: Vision foundation models and embodied recognition for industrial AI.
 
-# Shown as a compact strip in the profile card (update occasionally; values from Google Scholar).
-stats:
-  - value: "1,100+"
-    label: citations
-  - value: "13"
-    label: h-index
-  - value: "7"
-    label: patents
-stats_note: Google Scholar, Nov 2026
-
 links:
   scholar: https://scholar.google.com/citations?user=AzAVHUQAAAAJ
   github: https://github.com/youn720lee
