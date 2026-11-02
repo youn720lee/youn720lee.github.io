@@ -99,12 +99,15 @@
         <p class="bio">{{ para | safe }}</p>
         {% endfor %}
         <div class="about-cols">
+          {% if profile.email %}
           <div>
-            <h3 class="h3">Interests</h3>
-            <ul class="interests">
-              {% for it in profile.interests %}<li>{{ it }}</li>{% endfor %}
+            <h3 class="h3">Contact</h3>
+            <ul class="contact-list">
+              <li><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></li>
+              {% if profile.email_alt %}<li><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a></li>{% endif %}
             </ul>
           </div>
+          {% endif %}
           <div>
             <h3 class="h3">Education</h3>
             <ul class="edu">
@@ -121,12 +124,6 @@
             </ul>
           </div>
         </div>
-        {% if profile.email %}
-        <div class="about-contact">
-          <h3 class="h3">Contact</h3>
-          <p class="contact-line"><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:{{ profile.email }}">{{ profile.email }}</a>{% if profile.email_alt %}<span class="sep">·</span><a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a>{% endif %}</p>
-        </div>
-        {% endif %}
       </div>
     </div>
   </section>

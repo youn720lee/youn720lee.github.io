@@ -466,3 +466,11 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 .contact-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0; font-size: 0.82rem; color: var(--fg-soft); }
 .contact-line .icon { color: var(--accent); width: 1.15em; height: 1.15em; }
 .contact-line .sep { color: var(--muted); }
+
+/* Contact in the left column of About (replaces Interests). */
+.contact-list { list-style: none; }
+.contact-list li { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; margin-bottom: 5px; color: var(--fg-soft); }
+.contact-list .icon { color: var(--accent); width: 1.15em; height: 1.15em; flex: none; }
+@media (min-width: 1024px) {
+  .about-cols { column-gap: 56px; }
+}
