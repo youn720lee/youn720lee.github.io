@@ -86,9 +86,6 @@
           {% if L.linkedin %}<li><a class="social-linkedin" href="{{ L.linkedin }}" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg><span class="sr-only">LinkedIn</span></a></li>{% endif %}
           {% if profile.cv %}<li><a class="social-cv" href="{{ profile.cv }}" target="_blank" rel="noopener" title="CV"><svg class="icon"><use href="#i-cv"/></svg><span class="sr-only">CV</span></a></li>{% endif %}
         </ul>
-        {% if profile.email %}
-        <p class="contact"><span class="contact-label">Contact</span><a href="mailto:{{ profile.email }}">{{ profile.email }}</a>{% if profile.email_alt %}<a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a>{% endif %}</p>
-        {% endif %}
         {% if profile.stats %}
         <ul class="stats" title="{{ profile.stats_note }}">
           {% for st in profile.stats %}<li><span class="stat-value">{{ st.value }}</span><span class="stat-label">{{ st.label }}</span></li>{% endfor %}
@@ -350,12 +347,11 @@
 
 <footer class="footer">
   <div class="container footer-contact">
-    <p class="footer-cta">Interested in vision foundation models for manufacturing? <a href="mailto:{{ profile.email }}">Get in touch</a>.</p>
+    <p class="footer-cta"><span class="contact-label">Contact</span> <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>{% if profile.email_alt %} <span class="sep">·</span> <a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a>{% endif %}</p>
   </div>
   <div class="container footer-inner">
     <span>© {{ year_now }} {{ profile.name }}. Last updated {{ updated }}.</span>
     <span class="footer-links">
-      {% if profile.email %}<a href="mailto:{{ profile.email }}">Email</a>{% endif %}
       {% if L.scholar %}<a href="{{ L.scholar }}" target="_blank" rel="noopener">Scholar</a>{% endif %}
       {% if L.github %}<a href="{{ L.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
       {% if L.linkedin %}<a href="{{ L.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
