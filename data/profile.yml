@@ -82,21 +82,21 @@ experience:
 
 news:
   - date: 2026-10
-    text: Our line segment detection paper <em>Not All Lines Are Equal</em> was accepted to <strong>WACV 2027</strong>.
+    text: Our line segment detection paper <em>Not All Lines Are Equal</em> is accepted to <strong>WACV 2027</strong>.
   - date: 2026-10
-    text: Received the <strong>Annual Award</strong> of the AI Inspection Technology Group, Samsung Electronics, for developing the DX AI Vision Platform Data Agent.
+    text: Our DX AI Vision Platform Data Agent wins the <strong>Annual Award</strong> of the AI Inspection Technology Group, Samsung Electronics.
   - date: 2026-06
-    text: Recognized as an <strong>Outstanding Reviewer</strong> at CVPR 2026.
+    text: I am selected as an <strong>Outstanding Reviewer</strong> of CVPR 2026.
   - date: 2026-02
-    text: <em>Anomaly as Non-Conformity</em>, a training-free anomaly detection method, was accepted to <strong>CVPR 2026</strong>.
+    text: <em>Anomaly as Non-Conformity</em>, a training-free anomaly detection method, is accepted to <strong>CVPR 2026</strong>.
   - date: 2026-01
-    text: Joined the AI Inspection Technology Group at Samsung Electronics, working on vision foundation models for inspection.
+    text: I join the AI Inspection Technology Group at Samsung Electronics, working on vision foundation models for inspection.
   - date: 2025
-    text: "Received an Honorable Mention at the <strong>Samsung Best Paper Awards (SBPA)</strong> for <em>HDO: Hierarchical Defect Ontology for Vision Inspection</em>."
+    text: "<em>HDO: Hierarchical Defect Ontology for Vision Inspection</em> receives an Honorable Mention at the <strong>Samsung Best Paper Awards (SBPA)</strong>."
   - date: 2024-10
-    text: Our vision inspection foundation model won the <strong>Grand Prize</strong> at the Samsung IT Innovation Awards (SIIA), selected across the entire Samsung Group.
+    text: Our vision inspection foundation model wins the <strong>Grand Prize</strong> at the Samsung IT Innovation Awards (SIIA), selected across the entire Samsung Group.
   - date: 2024-07
-    text: <em>Self-Supervised Industrial Image Generation for Defect Recognition Under Limited Data</em> received the <strong>Best Paper Runner-Up Award</strong> at IEEE AVSS 2024.
+    text: <em>Self-Supervised Industrial Image Generation for Defect Recognition Under Limited Data</em> receives the <strong>Best Paper Runner-Up Award</strong> at IEEE AVSS 2024.
 
 awards:
   - year: 2026
