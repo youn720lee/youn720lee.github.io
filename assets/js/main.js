@@ -110,6 +110,18 @@
     });
   }
 
+  var expToggle = $('#exp-toggle');
+  if (expToggle) {
+    var expItems = $$('.tl-more');
+    var expLabel = expToggle.textContent;
+    expToggle.addEventListener('click', function () {
+      var open = expToggle.getAttribute('aria-expanded') === 'true';
+      expItems.forEach(function (li) { li.hidden = open; });
+      expToggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+      expToggle.textContent = open ? expLabel : 'Show less';
+    });
+  }
+
   /* ---------------------------------------------------------- back to top */
   var toTop = $('#to-top');
   if (toTop) {

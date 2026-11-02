@@ -148,7 +148,7 @@
         <h2 class="h2">Work Experience</h2>
         <ol class="timeline">
           {% for x in profile.experience %}
-          <li class="tl-item">
+          <li class="tl-item{% if loop.index > 2 %} tl-more{% endif %}"{% if loop.index > 2 %} hidden{% endif %}>
             <div class="tl-dot"></div>
             <div class="tl-body">
               <div class="tl-head">
@@ -166,6 +166,9 @@
           </li>
           {% endfor %}
         </ol>
+        {% if profile.experience | length > 2 %}
+        <button type="button" class="news-toggle" id="exp-toggle" aria-expanded="false">Show {{ profile.experience | length - 2 }} earlier</button>
+        {% endif %}
 
       </div>
     </div>

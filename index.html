@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=a4635fd4">
+  <link rel="stylesheet" href="assets/css/style.css?v=3e317bf3">
   <script>
     // Apply the saved theme before first paint to avoid a flash.
     (function () { try { var t = localStorage.getItem('theme'); if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {} })();
@@ -159,7 +159,7 @@
               </details>
             </div>
           </li>
-          <li class="tl-item">
+          <li class="tl-item tl-more" hidden>
             <div class="tl-dot"></div>
             <div class="tl-body">
               <div class="tl-head">
@@ -170,6 +170,7 @@
             </div>
           </li>
         </ol>
+        <button type="button" class="news-toggle" id="exp-toggle" aria-expanded="false">Show 1 earlier</button>
 
       </div>
     </div>
@@ -1234,6 +1235,6 @@ Quang Vinh Dinh, <strong>Younkwan Lee</strong>, Hyunguk Choi, Moongu Jeon       
   </div>
 </dialog>
 
-<script src="assets/js/main.js?v=20db2b97"></script>
+<script src="assets/js/main.js?v=131e2c0a"></script>
 </body>
 </html>
