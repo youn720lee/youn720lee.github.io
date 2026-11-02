@@ -78,7 +78,7 @@
 - key: yu2024diffusion
   title: Denoising Diffusion Model with Adversarial Learning for Unsupervised Anomaly Detection on Brain MRI Images
   authors: [Jongmin Yu, Hyeontaek Oh, Younkwan Lee, Jinhong Yang]
-  venue: Pattern Recognition Letters
+  venue: Pattern Recognition Letters (PRL)
   venue_short: PRL
   year: 2024
   type: journal
@@ -181,7 +181,7 @@
 - key: kim2021cce
   title: Imbalanced Image Classification with Complement Cross Entropy
   authors: [Yechan Kim, Younkwan Lee, Moongu Jeon]
-  venue: Pattern Recognition Letters
+  venue: Pattern Recognition Letters (PRL)
   venue_short: PRL
   year: 2021
   type: journal

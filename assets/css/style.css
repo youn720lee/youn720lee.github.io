@@ -228,6 +228,7 @@ a.pub-thumb:hover img { transform: scale(1.03); }
 .pub-authors strong { color: var(--fg); font-weight: 700; }
 .pub-venue { color: var(--muted); font-size: 0.92rem; margin-bottom: 8px; }
 .pub-venue .venue { font-style: italic; }
+.pub-venue .acr { color: var(--accent-ink); font-weight: 700; font-style: normal; }
 .pub-extra { color: var(--fg-soft); }
 .pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 10px; }
 .type { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 5px; background: var(--bg-alt); border: 1px solid var(--line); color: var(--muted); }

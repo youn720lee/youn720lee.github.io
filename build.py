@@ -49,6 +49,24 @@ VENUE_COLORS = {
     "IEEE Access": ("#1f2937", "#6b7280"),
     "Inf. Sci.": ("#312e81", "#818cf8"),
 }
+# Acronyms that are NOT emphasised in the publication list.
+NO_HIGHLIGHT = {"ICSPCS", "ICCE-ASIA", "ICCAIS", "KCC", "KSC", "IPIU", "IEIE"}
+_ACR_RE = re.compile(r"\(([A-Za-z0-9][A-Za-z0-9\-/&. ]{0,14})\)")
+
+
+def venue_html(venue: str) -> str:
+    """Escape the venue name and wrap recognised acronyms, e.g. (WACV), in <strong>."""
+    esc = html.escape(venue)
+
+    def _wrap(m: re.Match) -> str:
+        acr = m.group(1)
+        if acr.upper() in NO_HIGHLIGHT:
+            return m.group(0)
+        return f'<strong class="acr">({acr})</strong>'
+
+    return _ACR_RE.sub(_wrap, esc)
+
+
 PALETTE = [
     ("#1e3a8a", "#3b82f6"), ("#0f766e", "#14b8a6"), ("#7c2d12", "#fb923c"),
     ("#4c1d95", "#8b5cf6"), ("#065f46", "#10b981"), ("#831843", "#ec4899"),
@@ -144,6 +162,7 @@ def main() -> None:
         p["type_label"] = TYPE_LABEL.get(p["type"], p["type"].title())
         p["is_first_author"] = bool(p["authors"]) and p["authors"][0] == self_name
         p["bibtex"] = bibtex(p)
+        p["venue_html"] = venue_html(p["venue"])
         if not p.get("image"):
             # Use assets/pubs/<key>.(jpg|png|webp|gif) when present, otherwise a venue tile.
             for ext in ("jpg", "jpeg", "png", "webp", "gif"):
