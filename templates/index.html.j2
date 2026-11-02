@@ -21,8 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css?v={{ asset_v.css }}">
   <script>
-    // Apply the saved theme before first paint to avoid a flash.
-    (function () { try { var t = localStorage.getItem('theme'); if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {} })();
+    // Light by default; dark only if the visitor chose it with the toggle.
+    (function () { try { if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {} })();
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"{{ profile.name }}","alternateName":"{{ profile.name_native }}","jobTitle":"{{ profile.role }}","worksFor":{"@type":"Organization","name":"{{ profile.org }}"},"url":"{{ profile.site_url }}/","email":"mailto:{{ profile.email }}","sameAs":[{% for k, v in L.items() %}"{{ v }}"{% if not loop.last %},{% endif %}{% endfor %}]}
@@ -240,7 +240,7 @@
 
   {% if projects %}
   <!-- ======================= PROJECTS ======================= -->
-  <section id="projects" class="section section-alt">
+  <section id="projects" class="section">
     <div class="container">
       <h2 class="h2">Industry Projects</h2>
       <p class="section-lead">R&amp;D programs I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
@@ -289,7 +289,7 @@
   {% set act = profile.activities %}
   {% if act %}
   <!-- ======================= ACTIVITIES ======================= -->
-  <section id="activities" class="section section-alt">
+  <section id="activities" class="section">
     <div class="container">
       <h2 class="h2">Talks &amp; Service</h2>
       <div class="activities">

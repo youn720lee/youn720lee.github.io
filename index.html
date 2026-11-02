@@ -18,8 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css?v=72bdefc6">
   <script>
-    // Apply the saved theme before first paint to avoid a flash.
-    (function () { try { var t = localStorage.getItem('theme'); if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {} })();
+    // Light by default; dark only if the visitor chose it with the toggle.
+    (function () { try { if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {} })();
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Younkwan Lee","alternateName":"이윤관","jobTitle":"Research Scientist / Staff Engineer","worksFor":{"@type":"Organization","name":"Samsung Electronics"},"url":"https://youn720lee.github.io/","email":"mailto:youn720.lee@samsung.com","sameAs":["https://scholar.google.com/citations?user=AzAVHUQAAAAJ","https://github.com/youn720lee","https://www.linkedin.com/in/younkwan-lee-14333ba6/","https://orcid.org/0000-0001-5622-3383"]}
@@ -606,7 +606,7 @@ Hyunguk Choi, <strong>Younkwan Lee</strong>, Kin Choong Yow, Moongu Jeon        
   </section>
 
   <!-- ======================= PROJECTS ======================= -->
-  <section id="projects" class="section section-alt">
+  <section id="projects" class="section">
     <div class="container">
       <h2 class="h2">Industry Projects</h2>
       <p class="section-lead">R&amp;D programs I have worked on at Samsung Electronics, from vision inspection foundation models to the MLOps and robotics that put them on production lines.</p>
@@ -776,7 +776,7 @@ Hyunguk Choi, <strong>Younkwan Lee</strong>, Kin Choong Yow, Moongu Jeon        
   </section>
 
   <!-- ======================= ACTIVITIES ======================= -->
-  <section id="activities" class="section section-alt">
+  <section id="activities" class="section">
     <div class="container">
       <h2 class="h2">Talks &amp; Service</h2>
       <div class="activities">
