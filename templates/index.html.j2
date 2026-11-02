@@ -81,10 +81,10 @@
         <p class="role">{{ profile.role }} <span class="at">@</span> <a href="{{ profile.org_url }}" target="_blank" rel="noopener">{{ profile.org }}</a></p>
         <p class="group">{{ profile.group }}</p>
         <ul class="social">
-          {% if L.scholar %}<li><a class="social-scholar" href="{{ L.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><svg class="icon"><use href="#i-scholar"/></svg><span>Google Scholar</span></a></li>{% endif %}
-          {% if L.github %}<li><a class="social-github" href="{{ L.github }}" target="_blank" rel="noopener" title="GitHub"><svg class="icon"><use href="#i-github"/></svg><span>GitHub</span></a></li>{% endif %}
-          {% if L.linkedin %}<li><a class="social-linkedin" href="{{ L.linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a></li>{% endif %}
-          {% if profile.cv %}<li><a class="social-cv" href="{{ profile.cv }}" target="_blank" rel="noopener" title="CV"><svg class="icon"><use href="#i-cv"/></svg><span>CV</span></a></li>{% endif %}
+          {% if L.scholar %}<li><a class="social-scholar" href="{{ L.scholar }}" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><svg class="icon"><use href="#i-scholar"/></svg><span class="sr-only">Google Scholar</span></a></li>{% endif %}
+          {% if L.github %}<li><a class="social-github" href="{{ L.github }}" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg><span class="sr-only">GitHub</span></a></li>{% endif %}
+          {% if L.linkedin %}<li><a class="social-linkedin" href="{{ L.linkedin }}" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg><span class="sr-only">LinkedIn</span></a></li>{% endif %}
+          {% if profile.cv %}<li><a class="social-cv" href="{{ profile.cv }}" target="_blank" rel="noopener" title="CV"><svg class="icon"><use href="#i-cv"/></svg><span class="sr-only">CV</span></a></li>{% endif %}
         </ul>
         {% if profile.email %}
         <p class="contact"><span class="contact-label">Contact</span><a href="mailto:{{ profile.email }}">{{ profile.email }}</a>{% if profile.email_alt %}<a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a>{% endif %}</p>

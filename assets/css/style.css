@@ -114,7 +114,7 @@ button { font: inherit; color: inherit; }
 
 /* ------------------------------------------------------------------ about */
 .about { padding-top: 44px; }
-.about-grid { display: grid; grid-template-columns: 336px 1fr; gap: 44px; align-items: start; }
+.about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: start; }
 .profile-card { text-align: center; position: sticky; top: calc(var(--nav-h) + 24px); }
 .avatar {
   width: 220px; height: 220px; border-radius: 50%; object-fit: cover; margin: 0 auto 18px;
@@ -127,27 +127,25 @@ button { font: inherit; color: inherit; }
 .role a { font-weight: 600; }
 .org { margin: 0 0 2px; font-weight: 500; }
 .group { color: var(--muted); font-size: 0.88rem; margin: 0 0 16px; line-height: 1.45; }
-.social { list-style: none; display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px; margin-bottom: 12px; }
+.social { list-style: none; display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px; margin-bottom: 12px; }
 .social a {
-  display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; font-size: 0.79rem; font-weight: 600; white-space: nowrap;
+  display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%;
   border: 1px solid var(--line-strong); color: var(--fg-soft); background: var(--card); transition: all .15s ease;
 }
-.social a:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow-sm); border-color: transparent; color: #fff; }
-.social .icon { width: 1.1em; height: 1.1em; fill: currentColor; stroke: none; }
-.social-mail .icon, .social-cv .icon { fill: none; stroke: currentColor; }
+.social a:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow-sm); border-color: transparent; }
+.social .icon { width: 1.35em; height: 1.35em; fill: currentColor; stroke: none; }
+.social-cv .icon { fill: none; stroke: currentColor; }
 .social-scholar .icon { color: #4285f4; }
 .social-github .icon { color: #181717; }
 [data-theme="dark"] .social-github .icon { color: #e6e9ef; }
 .social-linkedin .icon { color: #0a66c2; }
-.social-orcid .icon { color: #a6ce39; }
-.social-mail .icon { color: var(--accent); }
 .social-cv .icon { color: var(--accent); }
 .social a:hover .icon { color: #fff !important; }
-.social-mail:hover, .social-cv:hover { background: var(--accent); }
+.social-cv:hover { background: var(--accent); }
 .social-scholar:hover { background: #4285f4; }
 .social-github:hover { background: #24292f; }
 .social-linkedin:hover { background: #0a66c2; }
-.social-orcid:hover { background: #8cb82b; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .contact { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.55; display: flex; flex-direction: column; align-items: center; }
 .contact-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
 .about-body .h2 { margin-top: 6px; }
@@ -322,8 +320,7 @@ a.pub-thumb:hover img { transform: scale(1.03); }
 
 /* ------------------------------------------------------------------ responsive */
 @media (max-width: 960px) {
-  .about-grid { grid-template-columns: 300px 1fr; gap: 32px; }
-  .social { flex-wrap: wrap; }
+  .about-grid { grid-template-columns: 260px 1fr; gap: 32px; }
   .avatar { width: 190px; height: 190px; }
   .projects { grid-template-columns: 1fr; }
 }
