@@ -55,6 +55,11 @@ Append an entry to `data/publications.yml`:
   image: assets/pubs/lee2027example.png   # optional; omit to use a venue tile
 ```
 
+Thumbnails are picked up automatically: save a figure as
+`assets/pubs/<key>.jpg` (or `.png`) and rebuild — no `image:` line needed.
+A 3:2 image around 720×480 px looks best; anything else is letter-boxed or
+cropped to 3:2.
+
 ### Replacing the avatar
 
 Save a square photo as `assets/img/avatar.jpg` and set

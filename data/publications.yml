@@ -21,7 +21,7 @@
 
 - key: lee2027notalllines
   title: "Not All Lines Are Equal: Input-Adaptive Line Segment Detection"
-  authors: [Younkwan Lee, Ju-eun Ko]
+  authors: [Younkwan Lee, Jueun Ko]
   venue: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
   venue_short: WACV
   year: 2027
@@ -95,6 +95,7 @@
   year: 2024
   type: conference
   selected: true
+  award: Best Paper Runner-Up Award
   pages: 1–7
   links:
     doi: https://doi.org/10.1109/AVSS61716.2024.10672565

@@ -130,7 +130,7 @@ button { font: inherit; color: inherit; }
 }
 .social a:hover { color: #fff; background: var(--accent); border-color: var(--accent); text-decoration: none; transform: translateY(-1px); }
 .social .icon { width: 1.15em; height: 1.15em; }
-.email { font-size: 0.88rem; color: var(--muted); margin: 0; }
+.email { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.5; }
 .about-body .h2 { margin-top: 6px; }
 .bio { font-size: 1.02rem; color: var(--fg-soft); }
 .about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; }
@@ -204,7 +204,7 @@ button { font: inherit; color: inherit; }
 .pub { display: grid; grid-template-columns: 200px 1fr; gap: 22px; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .pub:last-child { border-bottom: 0; }
 .pub-thumb { display: block; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); background: var(--bg-alt); align-self: start; }
-.pub-thumb img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .25s ease; }
+.pub-thumb img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: #fff; transition: transform .25s ease; }
 a.pub-thumb:hover img { transform: scale(1.03); }
 .pub-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
 .pub-title a { color: var(--fg); }
@@ -260,6 +260,8 @@ a.pub-thumb:hover img { transform: scale(1.03); }
 .award-title .icon { color: var(--award); }
 .award-by { color: var(--muted); font-size: 0.92rem; }
 .award-note { color: var(--fg-soft); font-style: italic; }
+.award-link { margin-left: 8px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+.award-link::before { content: "↗ "; }
 
 /* ------------------------------------------------------------------ activities */
 .activities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
