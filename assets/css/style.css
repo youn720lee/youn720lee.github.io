@@ -451,5 +451,12 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 .d-title a:hover { color: var(--accent-ink); }
 
 .nowrap { white-space: nowrap; }
-.edu li { gap: 0; margin-bottom: 6px; }
+.edu li { gap: 8px; margin-bottom: 6px; }
 .bio { margin-bottom: 0; }
+
+/* Education keeps its icon; give the column room so the school and dates stay on one line each. */
+.edu .icon { width: 1.15em; height: 1.15em; margin-top: 0.1em; }
+.edu-inst, .edu-note { text-wrap: balance; }
+@media (min-width: 1024px) {
+  .about-cols { grid-template-columns: max-content minmax(0, 1fr); column-gap: 24px; }
+}
