@@ -157,7 +157,10 @@
               </div>
               <div class="tl-org">{{ x.org }}{% if x.location %} <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>{{ x.location }}</span>{% endif %}</div>
               {% if x.bullets %}
-              <ul class="tl-bullets">{% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+              <details class="tl-details">
+                <summary>Details</summary>
+                <ul class="tl-bullets">{% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+              </details>
               {% endif %}
             </div>
           </li>
