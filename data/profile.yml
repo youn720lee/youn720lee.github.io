@@ -26,11 +26,11 @@ links:
 
 bio:
   - >-
-    My research and development aim at industrial AI for a self-evolving dark factory, where manufacturing
-    systems learn from their own data with little human supervision. In the AI Inspection Technology Group at
-    Samsung Electronics, I work on <strong>Vision Foundation Models (VFM)</strong> and
-    <strong>Embodied Recognition Models (ER)</strong> for visual inspection, from visual grounding and anomaly
-    detection to production deployment.
+    My work aims to build foundation-model-based industrial AI for a self-evolving dark factory, where
+    production lines keep learning from their own data with minimal human intervention. In the AI Inspection
+    Technology Group at Samsung Electronics, I work on <strong>Vision Foundation Models (VFM)</strong> and
+    <strong>Embodied Recognition Models (ER)</strong> for visual inspection, covering visual grounding,
+    anomaly detection, and their deployment on production lines.
   - >-
     I received my Ph.D. from GIST in 2022 under Prof. Moongu Jeon, studying robust visual perception
     under adverse conditions.

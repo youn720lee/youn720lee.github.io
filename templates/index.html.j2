@@ -94,7 +94,6 @@
 
       <div class="about-body">
         <h2 class="h2">Introduction</h2>
-        {% if profile.tagline %}<p class="lead">{{ profile.tagline }}</p>{% endif %}
         {% for para in profile.bio %}
         <p class="bio">{{ para | safe }}</p>
         {% endfor %}
