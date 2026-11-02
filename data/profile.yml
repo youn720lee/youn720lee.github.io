@@ -66,13 +66,6 @@ experience:
     end: Dec 2025
     bullets:
       - Foundation-model-based vision inspection technology (Samsung IT Innovation Awards Grand Prize, 2024).
-  - title: Ph.D. Candidate
-    org: Machine Learning and Vision Laboratory, GIST
-    location: Gwangju, Korea
-    start: 2016
-    end: 2022
-    bullets:
-      - Robust perception for autonomous driving and surveillance — weather-robust enhancement, license plate recognition, lane detection, and anomaly detection.
   - title: Software Engineering Intern
     org: Microsoft (Global Intern Program)
     location: Seoul, Korea
