@@ -173,6 +173,11 @@ def main() -> None:
     (ROOT / "assets").mkdir(exist_ok=True)
     (ROOT / "assets" / "publications.bib").write_text("\n\n".join(p["bibtex"] for p in pubs) + "\n", encoding="utf-8")
 
+    # Content hashes for cache-busting the stylesheet and script (GitHub Pages caches assets).
+    def _v(rel: str) -> str:
+        return hashlib.md5((ROOT / rel).read_bytes()).hexdigest()[:8]
+    asset_v = {"css": _v("assets/css/style.css"), "js": _v("assets/js/main.js")}
+
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape(["html", "j2"]), trim_blocks=True, lstrip_blocks=True)
     env.filters["venue_year"] = lambda p: f"{p.get('venue_short') or p['venue']} {p['year']}"
     tpl = env.get_template("index.html.j2")
@@ -183,6 +188,7 @@ def main() -> None:
         projects=projects,
         counts=counts,
         self_name=self_name,
+        asset_v=asset_v,
         updated=_dt.date.today().strftime("%B %Y"),
         year_now=_dt.date.today().year,
     )
