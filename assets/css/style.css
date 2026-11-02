@@ -420,3 +420,11 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 .tl-details[open] summary::before { transform: rotate(90deg); }
 .tl-details summary:hover { text-decoration: underline; }
 .tl-details .tl-bullets { margin-top: 4px; }
+
+/* Work experience as a single compact band. */
+#experience .h2 { font-size: 1.3rem; margin-bottom: 10px; padding-bottom: 8px; }
+#experience .timeline { padding-left: 22px; }
+#experience .tl-dot { left: -22px; width: 14px; height: 14px; }
+#experience .tl-dates { font-size: 0.8rem; }
+#experience .tl-org { font-size: 0.84rem; }
+#experience .tl-bullets { font-size: 0.82rem; }

@@ -97,19 +97,6 @@
     if (e.key === 'Escape' && document.activeElement === search) { search.blur(); }
   });
 
-  /* ------------------------------------------------------------- news */
-  var newsToggle = $('#news-toggle');
-  if (newsToggle) {
-    var moreItems = $$('.news-more');
-    var moreLabel = newsToggle.textContent;
-    newsToggle.addEventListener('click', function () {
-      var open = newsToggle.getAttribute('aria-expanded') === 'true';
-      moreItems.forEach(function (li) { li.hidden = open; });
-      newsToggle.setAttribute('aria-expanded', open ? 'false' : 'true');
-      newsToggle.textContent = open ? moreLabel : 'Show less';
-    });
-  }
-
   var expToggle = $('#exp-toggle');
   if (expToggle) {
     var expItems = $$('.tl-more');
@@ -172,7 +159,7 @@
   }
 
   /* --------------------------------------------- active nav highlighting */
-  var sections = $$('main section[id], main [data-nav][id]');
+  var sections = $$('main section[id]');
   var links = $$('.nav-links a[href^="#"]');
   if ('IntersectionObserver' in window && sections.length && links.length) {
     var current = null;

@@ -124,48 +124,33 @@
     </div>
   </section>
 
-  <!-- ======================= NEWS + WORK EXPERIENCE ======================= -->
-  <section id="news" class="section section-compact section-alt">
-    <div class="container two-col">
-      <div class="col col-news">
-        <h2 class="h2">News</h2>
-        <ul class="news" id="news-list">
-          {% for n in profile.news %}
-          <li{% if loop.index > 3 %} class="news-more" hidden{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text">{{ n.text | safe }}</span></li>
-          {% endfor %}
-        </ul>
-        {% if profile.news | length > 3 %}
-        <button type="button" class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="news-list">Show {{ profile.news | length - 3 }} more</button>
-        {% endif %}
-
-      </div>
-      <div class="col col-exp" id="experience" data-nav>
-        <h2 class="h2">Work Experience</h2>
-        <ol class="timeline">
-          {% for x in profile.experience %}
-          <li class="tl-item{% if loop.index > 2 %} tl-more{% endif %}"{% if loop.index > 2 %} hidden{% endif %}>
-            <div class="tl-dot"></div>
-            <div class="tl-body">
-              <div class="tl-head">
-                <h3 class="tl-title">{{ x.title }}</h3>
-                <span class="tl-dates">{{ x.start }} – {{ x.end }}</span>
-              </div>
-              <div class="tl-org">{{ x.org }}{% if x.location %} <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>{{ x.location }}</span>{% endif %}</div>
-              {% if x.bullets %}
-              <details class="tl-details">
-                <summary>Details</summary>
-                <ul class="tl-bullets">{% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
-              </details>
-              {% endif %}
+  <!-- ======================= WORK EXPERIENCE ======================= -->
+  <section id="experience" class="section section-compact section-alt">
+    <div class="container">
+      <h2 class="h2">Work Experience</h2>
+      <ol class="timeline">
+        {% for x in profile.experience %}
+        <li class="tl-item{% if loop.index > 2 %} tl-more{% endif %}"{% if loop.index > 2 %} hidden{% endif %}>
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-head">
+              <h3 class="tl-title">{{ x.title }}</h3>
+              <span class="tl-dates">{{ x.start }} – {{ x.end }}</span>
             </div>
-          </li>
-          {% endfor %}
-        </ol>
-        {% if profile.experience | length > 2 %}
-        <button type="button" class="news-toggle" id="exp-toggle" aria-expanded="false">Show {{ profile.experience | length - 2 }} earlier</button>
-        {% endif %}
-
-      </div>
+            <div class="tl-org">{{ x.org }}{% if x.location %} <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>{{ x.location }}</span>{% endif %}</div>
+            {% if x.bullets %}
+            <details class="tl-details">
+              <summary>Details</summary>
+              <ul class="tl-bullets">{% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+            </details>
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+      {% if profile.experience | length > 2 %}
+      <button type="button" class="news-toggle" id="exp-toggle" aria-expanded="false">Show {{ profile.experience | length - 2 }} earlier</button>
+      {% endif %}
     </div>
   </section>
 
