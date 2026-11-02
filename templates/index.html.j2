@@ -121,6 +121,12 @@
             </ul>
           </div>
         </div>
+        {% if profile.email %}
+        <div class="about-contact">
+          <h3 class="h3">Contact</h3>
+          <p class="contact-line"><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:{{ profile.email }}">{{ profile.email }}</a>{% if profile.email_alt %}<span class="sep">·</span><a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a>{% endif %}</p>
+        </div>
+        {% endif %}
       </div>
     </div>
   </section>
@@ -341,9 +347,6 @@
 </main>
 
 <footer class="footer">
-  <div class="container footer-contact">
-    <p class="footer-cta"><span class="contact-label">Contact</span> <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>{% if profile.email_alt %} <span class="sep">·</span> <a href="mailto:{{ profile.email_alt }}">{{ profile.email_alt }}</a>{% endif %}</p>
-  </div>
   <div class="container footer-inner">
     <span>© {{ year_now }} {{ profile.name }}. Last updated {{ updated }}.</span>
     <span class="footer-links">
