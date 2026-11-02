@@ -81,11 +81,9 @@
         <p class="role">{{ profile.role }} <span class="at">@</span> <a href="{{ profile.org_url }}" target="_blank" rel="noopener">{{ profile.org }}</a></p>
         <p class="group">{{ profile.group }}</p>
         <ul class="social">
-          {% if profile.email %}<li><a class="social-mail is-primary" href="mailto:{{ profile.email }}" title="Send me an email"><svg class="icon"><use href="#i-mail"/></svg><span>Email</span></a></li>{% endif %}
           {% if L.scholar %}<li><a class="social-scholar" href="{{ L.scholar }}" target="_blank" rel="noopener" title="Google Scholar"><svg class="icon"><use href="#i-scholar"/></svg><span>Google Scholar</span></a></li>{% endif %}
           {% if L.github %}<li><a class="social-github" href="{{ L.github }}" target="_blank" rel="noopener" title="GitHub"><svg class="icon"><use href="#i-github"/></svg><span>GitHub</span></a></li>{% endif %}
           {% if L.linkedin %}<li><a class="social-linkedin" href="{{ L.linkedin }}" target="_blank" rel="noopener" title="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a></li>{% endif %}
-          {% if L.orcid %}<li><a class="social-orcid" href="{{ L.orcid }}" target="_blank" rel="noopener" title="ORCID"><svg class="icon"><use href="#i-orcid"/></svg><span>ORCID</span></a></li>{% endif %}
           {% if profile.cv %}<li><a class="social-cv" href="{{ profile.cv }}" target="_blank" rel="noopener" title="CV"><svg class="icon"><use href="#i-cv"/></svg><span>CV</span></a></li>{% endif %}
         </ul>
         {% if profile.email %}
