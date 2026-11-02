@@ -158,7 +158,7 @@ button { font: inherit; color: inherit; }
 .edu { list-style: none; }
 .edu li { display: flex; gap: 12px; margin-bottom: 14px; }
 .edu .icon { width: 1.35em; height: 1.35em; color: var(--accent); margin-top: 0.15em; }
-.edu-degree { font-weight: 600; font-size: 0.85rem; }
+.edu-degree { font-weight: 600; font-size: 0.85rem; text-wrap: balance; }
 .edu-inst { color: var(--muted); font-size: 0.8rem; }
 .edu-note { color: var(--muted); font-size: 0.76rem; }
 
@@ -449,3 +449,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 .domestic + .domestic { margin-top: 8px; }
 .d-title a { color: var(--fg); }
 .d-title a:hover { color: var(--accent-ink); }
+
+.nowrap { white-space: nowrap; }
+.edu li { gap: 0; margin-bottom: 6px; }
+.bio { margin-bottom: 0; }

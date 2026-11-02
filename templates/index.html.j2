@@ -78,7 +78,7 @@
       <aside class="profile-card">
         <img class="avatar" src="{{ profile.avatar }}" alt="{{ profile.name }}" width="220" height="220">
         <h1 class="name">{{ profile.name }}</h1>
-        <p class="role">{{ profile.role }} <span class="at">@</span> <a href="{{ profile.org_url }}" target="_blank" rel="noopener">{{ profile.org }}</a></p>
+        <p class="role">{{ profile.role }} <span class="nowrap"><span class="at">@</span> <a href="{{ profile.org_url }}" target="_blank" rel="noopener">{{ profile.org }}</a></span></p>
         <p class="group">{{ profile.group }}</p>
         <ul class="social">
           {% if L.scholar %}<li><a class="social-scholar" href="{{ L.scholar }}" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><svg class="icon"><use href="#i-scholar"/></svg><span class="sr-only">Google Scholar</span></a></li>{% endif %}
@@ -110,11 +110,10 @@
             <ul class="edu">
               {% for e in profile.education %}
               <li>
-                <svg class="icon"><use href="#i-grad"/></svg>
                 <div>
                   <div class="edu-degree">{{ e.degree }}</div>
-                  <div class="edu-inst">{{ e.institution }}{% if e.period %} · {{ e.period }}{% elif e.year %} · {{ e.year }}{% endif %}</div>
-                  {% if e.note %}<div class="edu-note">{{ e.note }}</div>{% endif %}
+                  <div class="edu-inst">{{ e.institution }}</div>
+                  <div class="edu-note">{{ e.period or e.year }}{% if e.note %} · {{ e.note }}{% endif %}</div>
                 </div>
               </li>
               {% endfor %}
