@@ -1,0 +1,441 @@
+# ---------------------------------------------------------------------------
+# Publications.  Newest first within the page is handled automatically (sorted
+# by year, then by the order in this file).  Fields:
+#
+#   key        : BibTeX key (unique)
+#   title      : paper title
+#   authors    : list of "First Last" (your own name is bolded automatically)
+#   venue      : full venue name (shown on the page / used in BibTeX)
+#   venue_short: short venue label used on the thumbnail tile (e.g. CVPR)
+#   year       : int
+#   type       : journal | conference | workshop | preprint | domestic
+#   selected   : true to show under the "Selected" filter
+#   award      : optional award string (e.g. "Best Student Paper Award")
+#   tags       : optional list of badges (Oral, Spotlight, To appear ...)
+#   note       : optional free text shown after the venue
+#   volume / number / pages : optional bibliographic details
+#   links      : optional dict — paper, arxiv, code, project, video, slides, poster, dataset, doi
+#   image      : optional thumbnail path (e.g. assets/pubs/myfigure.png).  If omitted a
+#                venue tile is generated automatically.
+# ---------------------------------------------------------------------------
+
+- key: lee2027notalllines
+  title: "Not All Lines Are Equal: Input-Adaptive Line Segment Detection"
+  authors: [Younkwan Lee, Ju-eun Ko]
+  venue: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+  venue_short: WACV
+  year: 2027
+  type: conference
+  selected: true
+  tags: [To appear]
+  links: {}
+
+- key: seo2026anomaly
+  title: Anomaly as Non-Conformity via Training-Free Graph Laplacian Energy Minimization
+  authors: [Jungwook Seo, Minjeong Kim, Younkwan Lee, Seungho Shin, Sungyong Baik]
+  venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+  venue_short: CVPR
+  year: 2026
+  type: conference
+  selected: true
+  pages: 21336–21345
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2026/html/Seo_Anomaly_as_Non-Conformity_via_Training-Free_Graph_Laplacian_Energy_Minimization_CVPR_2026_paper.html
+    arxiv: https://arxiv.org/abs/2605.28428
+
+- key: yu2025faceswap
+  title: Real-Time, High-Fidelity Face Identity Swapping with a Vision Foundation Model
+  authors: [Jongmin Yu, Hyeontaek Oh, Zhongtian Sun, Younkwan Lee, Jinhong Yang]
+  venue: IEEE Access
+  venue_short: IEEE Access
+  year: 2025
+  type: journal
+  links:
+    doi: https://doi.org/10.1109/ACCESS.2025.3606518
+
+- key: kim2025elastic
+  title: Unlocking Robust Semantic Segmentation Performance via Label-only Elastic Deformations against Implicit Label Noise
+  authors: [Yechan Kim, Dongho Yoon, Younkwan Lee, Unse Fatima, Hong Kook Kim, Songjae Lee, Sanga Park, Jeong Ho Park, Seonjong Kang, Moongu Jeon]
+  venue: arXiv preprint arXiv:2508.10383
+  venue_short: arXiv
+  year: 2025
+  type: preprint
+  links:
+    arxiv: https://arxiv.org/abs/2508.10383
+
+- key: jang2024disentangled
+  title: Disentangled Knowledge Distillation for Unified Multi-Class Anomaly Detection
+  authors: [Jiyong Jang, Hayeon Lee, Younkwan Lee]
+  venue: IEEE International Conference on Image Processing (ICIP)
+  venue_short: ICIP
+  year: 2024
+  type: conference
+  selected: true
+  pages: 312–318
+  links:
+    doi: https://doi.org/10.1109/ICIP51287.2024.10647795
+
+- key: yu2024diffusion
+  title: Denoising Diffusion Model with Adversarial Learning for Unsupervised Anomaly Detection on Brain MRI Images
+  authors: [Jongmin Yu, Hyeontaek Oh, Younkwan Lee, Jinhong Yang]
+  venue: Pattern Recognition Letters
+  venue_short: PRL
+  year: 2024
+  type: journal
+  volume: 186
+  pages: 229–235
+  links:
+    doi: https://doi.org/10.1016/j.patrec.2024.10.007
+
+- key: lee2024selfsupervised
+  title: Self-Supervised Industrial Image Generation for Defect Recognition Under Limited Data
+  authors: [Younkwan Lee]
+  venue: IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS)
+  venue_short: AVSS
+  year: 2024
+  type: conference
+  selected: true
+  pages: 1–7
+  links:
+    doi: https://doi.org/10.1109/AVSS61716.2024.10672565
+
+- key: lee2022perception
+  title: Perception-Friendly Video Enhancement for Autonomous Driving under Adverse Weather Conditions
+  authors: [Younkwan Lee, Yeongmin Ko, Yechan Kim, Moongu Jeon]
+  venue: IEEE International Conference on Robotics and Automation (ICRA)
+  venue_short: ICRA
+  year: 2022
+  type: conference
+  selected: true
+  pages: 7760–7767
+  links:
+    doi: https://doi.org/10.1109/ICRA46639.2022.9811870
+
+- key: lee2022badweather
+  title: "Learning to Remove Bad Weather: Towards Robust Visual Perception for Self-Driving"
+  authors: [Younkwan Lee, Yechan Kim, Jongmin Yu, Moongu Jeon]
+  venue: IEEE Robotics and Automation Letters (RA-L)
+  venue_short: RA-L
+  year: 2022
+  type: journal
+  selected: true
+  note: Also presented at ICRA 2022
+  links:
+    paper: https://ieeexplore.ieee.org/document/9722965
+
+- key: lee2022lpd
+  title: License Plate Detection via Information Maximization
+  authors: [Younkwan Lee, Jihyo Jeon, Yeongmin Ko, Moongu Jeon, Witold Pedrycz]
+  venue: IEEE Transactions on Intelligent Transportation Systems (T-ITS)
+  venue_short: T-ITS
+  year: 2022
+  type: journal
+  selected: true
+  volume: 23
+  number: 9
+  pages: 14908–14921
+  links:
+    doi: https://doi.org/10.1109/TITS.2021.3135015
+
+- key: ko2022pinet
+  title: Key Points Estimation and Point Instance Segmentation Approach for Lane Detection
+  authors: [Yeongmin Ko, Younkwan Lee, Shoaib Azam, Farzeen Munir, Moongu Jeon, Witold Pedrycz]
+  venue: IEEE Transactions on Intelligent Transportation Systems (T-ITS)
+  venue_short: T-ITS
+  year: 2022
+  type: journal
+  selected: true
+  volume: 23
+  number: 7
+  pages: 8949–8958
+  links:
+    doi: https://doi.org/10.1109/TITS.2021.3088488
+    arxiv: https://arxiv.org/abs/2002.06604
+    code: https://github.com/koyeongmin/PINet_new
+
+- key: yu2022abnormal
+  title: Abnormal Event Detection and Localization via Adversarial Event Prediction
+  authors: [Jongmin Yu, Younkwan Lee, Kin Choong Yow, Moongu Jeon, Witold Pedrycz]
+  venue: IEEE Transactions on Neural Networks and Learning Systems (T-NNLS)
+  venue_short: T-NNLS
+  year: 2022
+  type: journal
+  selected: true
+  volume: 33
+  number: 8
+  pages: 3572–3586
+  links:
+    doi: https://doi.org/10.1109/TNNLS.2021.3053563
+
+- key: jang2022lightrobust
+  title: Light Robust Monocular Depth Estimation for Outdoor Environment via Monochrome and Color Camera Fusion
+  authors: [Hyeonsoo Jang, Yeongmin Ko, Younkwan Lee, Moongu Jeon]
+  venue: arXiv preprint arXiv:2202.12108
+  venue_short: arXiv
+  year: 2022
+  type: preprint
+  links:
+    arxiv: https://arxiv.org/abs/2202.12108
+
+- key: kim2021cce
+  title: Imbalanced Image Classification with Complement Cross Entropy
+  authors: [Yechan Kim, Younkwan Lee, Moongu Jeon]
+  venue: Pattern Recognition Letters
+  venue_short: PRL
+  year: 2021
+  type: journal
+  selected: true
+  volume: 151
+  pages: 33–40
+  links:
+    doi: https://doi.org/10.1016/j.patrec.2021.07.017
+    arxiv: https://arxiv.org/abs/2009.02189
+
+- key: lee2021rain
+  title: Learning to See in the Rain via Disentangled Representation
+  authors: [Younkwan Lee, Hyeongjun Yoo, Jongmin Yu, Moongu Jeon]
+  venue: IEEE Robotics and Automation Letters (RA-L)
+  venue_short: RA-L
+  year: 2021
+  type: journal
+  selected: true
+  links:
+    paper: https://ieeexplore.ieee.org/document/9565370
+
+- key: lee2021taskdriven
+  title: Task-Driven Deep Image Enhancement Network for Autonomous Driving in Bad Weather
+  authors: [Younkwan Lee, Jihyo Jeon, Yeongmin Ko, Byunggwan Jeon, Moongu Jeon]
+  venue: IEEE International Conference on Robotics and Automation (ICRA)
+  venue_short: ICRA
+  year: 2021
+  type: conference
+  selected: true
+  pages: 13746–13753
+  links:
+    doi: https://doi.org/10.1109/ICRA48506.2021.9561076
+    arxiv: https://arxiv.org/abs/2110.07206
+
+- key: lee2021disentangle
+  title: Learning to Disentangle Representations for Rain Streak Removal
+  authors: [Younkwan Lee, Hyeongjun Yoo, Moongu Jeon]
+  venue: IEEE International Conference on Image Processing (ICIP)
+  venue_short: ICIP
+  year: 2021
+  type: conference
+  pages: 574–578
+  links:
+    doi: https://doi.org/10.1109/ICIP42928.2021.9506312
+
+- key: lee2020contextaware
+  title: Context-Aware Multi-Task Learning for Traffic Scene Recognition in Autonomous Vehicles
+  authors: [Younkwan Lee, Jihyo Jeon, Jongmin Yu, Moongu Jeon]
+  venue: IEEE Intelligent Vehicles Symposium (IV)
+  venue_short: IV
+  year: 2020
+  type: conference
+  selected: true
+  award: Best Student Paper Award
+  pages: 723–730
+  links:
+    doi: https://doi.org/10.1109/IV47402.2020.9304708
+    arxiv: https://arxiv.org/abs/2004.01351
+
+- key: yu2020roaddefect
+  title: Unsupervised Pixel-level Road Defect Detection via Adversarial Image-to-Frequency Transform
+  authors: [Jongmin Yu, Du Yong Kim, Younkwan Lee, Moongu Jeon]
+  venue: IEEE Intelligent Vehicles Symposium (IV)
+  venue_short: IV
+  year: 2020
+  type: conference
+  pages: 1708–1713
+  links:
+    doi: https://doi.org/10.1109/IV47402.2020.9304843
+    arxiv: https://arxiv.org/abs/2001.11175
+
+- key: lee2020attribute
+  title: Self-Supervised Attribute-Aware Refinement Network for Low-Quality Text Recognition
+  authors: [Younkwan Lee, Hyeongjun Yoo, Yechan Kim, Jihun Jeong, Moongu Jeon]
+  venue: European Conference on Computer Vision (ECCV) Workshops
+  venue_short: ECCVW
+  year: 2020
+  type: workshop
+  pages: 228–244
+  links:
+    doi: https://doi.org/10.1007/978-3-030-68238-5_17
+
+- key: choi2020blockchange
+  title: Block Change Learning for Knowledge Distillation
+  authors: [Hyunguk Choi, Younkwan Lee, Kin Choong Yow, Moongu Jeon]
+  venue: Information Sciences
+  venue_short: Inf. Sci.
+  year: 2020
+  type: journal
+  volume: 513
+  pages: 360–371
+  links:
+    doi: https://doi.org/10.1016/j.ins.2019.10.074
+
+- key: lee2019snider
+  title: "SNIDER: Single Noisy Image Denoising and Rectification for Improving License Plate Recognition"
+  authors: [Younkwan Lee, Juhyun Lee, Hoyeon Ahn, Moongu Jeon]
+  venue: IEEE/CVF International Conference on Computer Vision (ICCV) Workshops
+  venue_short: ICCVW
+  year: 2019
+  type: workshop
+  selected: true
+  award: Outstanding Paper Award (RLQ Workshop)
+  links:
+    doi: https://doi.org/10.1109/ICCVW.2019.00131
+    arxiv: https://arxiv.org/abs/1910.03876
+
+- key: lee2019roadmarking
+  title: Unconstrained Road Marking Recognition with Generative Adversarial Networks
+  authors: [Younkwan Lee, Juhyun Lee, Yoojin Hong, Yeongmin Ko, Moongu Jeon]
+  venue: IEEE Intelligent Vehicles Symposium (IV)
+  venue_short: IV
+  year: 2019
+  type: conference
+  pages: 1414–1419
+  links:
+    doi: https://doi.org/10.1109/IVS.2019.8814057
+
+- key: lee2019practical
+  title: Practical License Plate Recognition in Unconstrained Surveillance Systems with Adversarial Super-Resolution
+  authors: [Younkwan Lee, Jiwon Jun, Yoojin Hong, Moongu Jeon]
+  venue: International Conference on Computer Vision Theory and Applications (VISAPP)
+  venue_short: VISAPP
+  year: 2019
+  type: conference
+  pages: 68–76
+  links:
+    doi: https://doi.org/10.5220/0007378300680076
+    arxiv: https://arxiv.org/abs/1910.04324
+
+- key: lee2019pm25
+  title: Empirical Analysis of Tree-Based Models for PM2.5 Concentration Prediction
+  authors: [Juhyun Lee, Yoojin Hong, Younkwan Lee, Hyun Soo Kim, Chul Han Song, Du Yong Kim, Moongu Jeon]
+  venue: International Conference on Signal Processing and Communication Systems (ICSPCS)
+  venue_short: ICSPCS
+  year: 2019
+  type: conference
+  pages: 1–7
+  links:
+    doi: https://doi.org/10.1109/ICSPCS47537.2019.9008645
+
+- key: lee2018lpr
+  title: Accurate License Plate Recognition and Super-Resolution Using Generative Adversarial Networks on Traffic Surveillance Video
+  authors: [Younkwan Lee, Jaewoong Yun, Yoojin Hong, Juhyun Lee, Moongu Jeon]
+  venue: IEEE International Conference on Consumer Electronics – Asia (ICCE-Asia)
+  venue_short: ICCE-Asia
+  year: 2018
+  type: conference
+  pages: 1–4
+  links: {}
+
+- key: dinh2018trafficsign
+  title: Real-Time Traffic Sign Recognition
+  authors: [Quang Vinh Dinh, Younkwan Lee, Hyunguk Choi, Moongu Jeon]
+  venue: IEEE International Conference on Consumer Electronics – Asia (ICCE-Asia)
+  venue_short: ICCE-Asia
+  year: 2018
+  type: conference
+  links: {}
+
+- key: lee2017cuboid
+  title: Automatic Part Localization Using 3D Cuboid Box for Vehicle Subcategory Recognition
+  authors: [Younkwan Lee, Jongmin Yu, Moongu Jeon]
+  venue: International Conference on Control, Automation and Information Sciences (ICCAIS)
+  venue_short: ICCAIS
+  year: 2017
+  type: conference
+  pages: 175–180
+  links:
+    doi: https://doi.org/10.1109/ICCAIS.2017.8217571
+
+# ----------------------------- Domestic (Korean) -----------------------------
+
+- key: lee2020denoising_kcc
+  title: "Comparative Analysis of High-Level Vision Task Performance under Image Denoising (Image Denoising에 따른 High-Level Vision Task 성능 비교 분석)"
+  authors: [Younkwan Lee, Jihyo Jeon, Daeyoung Han, Moongu Jeon]
+  venue: Korea Computer Congress (KCC), Korean Institute of Information Scientists and Engineers
+  venue_short: KCC
+  year: 2020
+  type: domestic
+  links: {}
+
+- key: jeon2020attention_kcc
+  title: "Attention-based Self-Supervised Monocular Depth Estimation (어텐션 기반 자기지도학습 단안 영상 깊이 추정)"
+  authors: [Jihyo Jeon, Younkwan Lee, Daeyoung Han, Moongu Jeon]
+  venue: Korea Computer Congress (KCC), Korean Institute of Information Scientists and Engineers
+  venue_short: KCC
+  year: 2020
+  type: domestic
+  pages: 779–781
+  links: {}
+
+- key: yoo2020resolution_kcc
+  title: "Analysis of Data Resolution in Real-World Image Classification (해상도에 따른 실세계 이미지 분류 고찰)"
+  authors: [Hyeongjun Yoo, Younkwan Lee, Moongu Jeon]
+  venue: Korea Computer Congress (KCC), Korean Institute of Information Scientists and Engineers
+  venue_short: KCC
+  year: 2020
+  type: domestic
+  pages: 729–731
+  links: {}
+
+- key: kim2020cce_kcc
+  title: "Learning from Imbalanced Data with Cross Entropy (Cross Entropy를 이용한 불균형 데이터의 학습)"
+  authors: [Yechan Kim, Younkwan Lee, Moongu Jeon]
+  venue: Korea Computer Congress (KCC), Korean Institute of Information Scientists and Engineers
+  venue_short: KCC
+  year: 2020
+  type: domestic
+  award: Excellence Paper Prize
+  links: {}
+
+- key: jeon2020depth_ipiu
+  title: "Self-Supervised Monocular Depth Estimation (자기지도적 학습에 의한 단안 영상 깊이 추정)"
+  authors: [Jihyo Jeon, Younkwan Lee, Juhyun Lee, Yeongmin Ko, Moongu Jeon]
+  venue: Workshop on Image Processing and Image Understanding (IPIU)
+  venue_short: IPIU
+  year: 2020
+  type: domestic
+  links: {}
+
+- key: lee2019rotation_ksc
+  title: "Rotation-Invariant Self-Supervised Object Detection (회전 불변의 자기지도적 물체 검출)"
+  authors: [Younkwan Lee, Juhyun Lee, Jiwon Jun, Yeongmin Song, Moongu Jeon]
+  venue: Korea Software Congress (KSC), Korean Institute of Information Scientists and Engineers
+  venue_short: KSC
+  year: 2019
+  type: domestic
+  links: {}
+
+- key: lee2019pm10_ieie
+  title: "Empirical Analysis of Machine-Learning-Based Missing Value Imputation for PM10 Prediction (PM10 농도 예측을 위한 머신러닝 기반 결측치 처리의 실증적 분석)"
+  authors: [Juhyun Lee, Younkwan Lee, Yoojin Hong, Moongu Jeon]
+  venue: Summer Annual Conference of the Institute of Electronics and Information Engineers (IEIE)
+  venue_short: IEIE
+  year: 2019
+  type: domestic
+  links: {}
+
+- key: lee2017lpd_ksc
+  title: "A CNN-Based Single-Pipeline Detection Method for License Plate Detection in Unconstrained Environments (비정형화된 환경에서 차량 번호판 검출을 위한 CNN 기반의 단일 파이프라인 검출 방법)"
+  authors: [Younkwan Lee, Yoojin Hong, Jaewoong Yun, Moongu Jeon]
+  venue: Korea Software Congress (KSC), Korean Institute of Information Scientists and Engineers
+  venue_short: KSC
+  year: 2017
+  type: domestic
+  award: Excellence Paper Prize
+  pages: 910–912
+  links: {}
+
+- key: lee2017text_ieie
+  title: "Scene Text Detection Using a Text Synthesis Model (자연의 영상에서 문자 합성 모델을 사용한 문자 검출)"
+  authors: [Younkwan Lee, Dae-Young Shim, Moongu Jeon]
+  venue: Summer Annual Conference of the Institute of Electronics and Information Engineers (IEIE)
+  venue_short: IEIE
+  year: 2017
+  type: domestic
+  links: {}

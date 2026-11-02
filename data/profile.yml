@@ -1,0 +1,179 @@
+# ---------------------------------------------------------------------------
+# Profile / about-me data.  Edit this file and run `python build.py`.
+# ---------------------------------------------------------------------------
+name: Younkwan Lee
+name_native: 이윤관
+first_name: Younkwan
+last_name: Lee
+role: Staff Engineer · Project Lead
+org: Samsung Electronics
+org_url: https://www.samsung.com/
+group: AI Inspection Technology Group, Global Technology Research (GTR)
+location: Suwon / Seoul, South Korea
+email: tranqualize@gmail.com
+avatar: assets/img/avatar.svg        # replace with assets/img/avatar.jpg when you add a photo
+cv: ""                                # e.g. assets/cv/Younkwan_Lee_CV.pdf
+site_url: https://youn720lee.github.io
+site_title: Younkwan Lee
+tagline: Computer vision researcher building vision foundation models for industrial inspection.
+
+links:
+  scholar: https://scholar.google.com/citations?user=AzAVHUQAAAAJ
+  github: https://github.com/youn720lee
+  linkedin: https://www.linkedin.com/in/younkwan-lee-14333ba6/
+  orcid: https://orcid.org/0000-0001-5622-3383
+
+bio:
+  - >-
+    I am a Staff Engineer and project lead in the AI Inspection Technology Group at
+    Samsung Electronics (Global Technology Research), where I lead research and development on
+    <strong>Vision Foundation Models (VFM)</strong> for manufacturing visual inspection.
+    My work spans foundation-model-based inspection platforms, anomaly and defect detection under
+    limited data, and the data and model infrastructure that brings these models to production lines.
+  - >-
+    I received my Ph.D. in Electrical Engineering and Computer Science from the Gwangju Institute of
+    Science and Technology (GIST) in 2022, advised by Prof. Moongu Jeon. My doctoral research focused on
+    robust visual perception in unconstrained environments, where recognition is threatened by bad weather,
+    noise, occlusion, and dataset bias. Before that, I received a B.S. in Computer Science from
+    Korea Aerospace University in 2016.
+
+interests:
+  - Vision Foundation Models for Industrial Inspection
+  - Anomaly Detection & Defect Recognition
+  - Few-shot and Open-vocabulary Object Detection
+  - Robust Visual Perception under Degradation
+  - Knowledge Distillation & Efficient Vision Models
+
+education:
+  - degree: Ph.D. in Electrical Engineering and Computer Science
+    institution: Gwangju Institute of Science and Technology (GIST)
+    year: 2022
+    note: Advisor — Prof. Moongu Jeon (Machine Learning and Vision Lab)
+  - degree: B.S. in Computer Science
+    institution: Korea Aerospace University
+    year: 2016
+
+experience:
+  - title: Staff Engineer · Project Lead
+    org: Samsung Electronics — AI Inspection Technology Group, Global Technology Research (GTR)
+    location: Suwon, Korea
+    start: Jan 2026
+    end: Present
+    bullets:
+      - Lead the Vision Foundation Model (VFM) research line for manufacturing visual inspection (Smart Factory Vision).
+      - Drive the DX AI Vision Platform and its data agent, delivering inspection models across production lines.
+  - title: Staff Engineer
+    org: Samsung Electronics — Global Technology Research (GTR)
+    location: Suwon, Korea
+    start: Mar 2022
+    end: Dec 2025
+    bullets:
+      - Developed foundation-model-based vision inspection technology, recognised with the Samsung IT Innovation Awards Grand Prize (2024).
+  - title: Ph.D. Researcher
+    org: Machine Learning and Vision Laboratory, GIST
+    location: Gwangju, Korea
+    start: 2016
+    end: 2022
+    bullets:
+      - Robust perception for autonomous driving and surveillance — weather-robust enhancement, license plate recognition, lane detection, and anomaly detection.
+  - title: Software Engineering Intern
+    org: Microsoft (Global Intern Program)
+    location: Seoul, Korea
+    start: Jul 2014
+    end: Dec 2014
+    bullets: []
+
+news:
+  - date: 2026-10
+    text: Our line segment detection paper <em>Not All Lines Are Equal</em> was accepted to <strong>WACV 2027</strong>.
+  - date: 2026-10
+    text: Received the <strong>Annual Award</strong> of the AI Inspection Technology Group, Samsung Electronics, for developing the DX AI Vision Platform Data Agent.
+  - date: 2026-06
+    text: <em>Anomaly as Non-Conformity</em>, a training-free anomaly detection method, was presented at <strong>CVPR 2026</strong>.
+  - date: 2026-01
+    text: Joined the AI Inspection Technology Group at Samsung Electronics as a project lead for vision foundation models.
+  - date: 2025
+    text: "Received an Honorable Mention at the <strong>Samsung Best Paper Awards (SBPA)</strong> for <em>HDO: Hierarchical Defect Ontology for Vision Inspection</em>."
+  - date: 2024-10
+    text: Our vision inspection foundation model won the <strong>Grand Prize</strong> at the Samsung IT Innovation Awards (SIIA), selected across the entire Samsung Group.
+
+awards:
+  - year: 2026
+    title: Annual Award, AI Inspection Technology Group
+    by: Samsung Electronics
+    note: Development of the DX AI Vision Platform Data Agent
+  - year: 2025
+    title: Samsung Best Paper Awards (SBPA) — Honorable Mention
+    by: Samsung Electronics
+    note: "HDO: Hierarchical Defect Ontology for Vision Inspection"
+  - year: 2024
+    title: Samsung IT Innovation Awards (SIIA) — Grand Prize
+    by: Samsung Group (group-wide competition)
+    note: Project representative, Vision Inspection Foundation Model
+  - year: 2020
+    title: Best Student Paper Award
+    by: IEEE Intelligent Vehicles Symposium (IV 2020)
+    note: Context-Aware Multi-Task Learning for Traffic Scene Recognition in Autonomous Vehicles
+  - year: 2020
+    title: Excellence Paper Prize
+    by: Korea Computer Congress (KCC 2020)
+  - year: 2019
+    title: Outstanding Paper Award
+    by: RLQ Workshop at ICCV 2019
+    note: "SNIDER: Single Noisy Image Denoising and Rectification for Improving License Plate Recognition"
+  - year: 2019
+    title: Excellence Paper Prize
+    by: School of EECS, GIST
+  - year: 2017
+    title: Excellence Paper Prize
+    by: Korea Software Congress (KSC 2017)
+  - year: 2016–2022
+    title: Korean Government Scholarship (M.S./Ph.D.)
+    by: Government of the Republic of Korea
+
+activities:
+  organizing:
+    - DeepView Workshop at IEEE AVSS 2021 — co-organizer
+  reviewing:
+    - IEEE Transactions on Intelligent Transportation Systems (T-ITS)
+    - IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
+    - IEEE Access
+    - Information Sciences
+    - IET Image Processing
+    - IEEE Intelligent Vehicles Symposium (IV)
+  talks:
+    - title: Fast Object Detection in Smart Factory
+      where: POSCO Technical Research Laboratories, Gwangyang, Korea
+      date: Nov 2019
+    - title: Deep Learning Based License Plate Recognition
+      where: DeepView Seminar, ETRI, Daejeon, Korea
+      date: May 2019
+    - title: Smart Factory and Generative Adversarial Networks
+      where: POSCO Technical Research Laboratories, Gwangyang, Korea
+      date: Aug 2018
+  teaching:
+    - Teaching Assistant, Machine Learning (EC4213), GIST, 2017
+    - Teaching Assistant, Computer Graphics, GIST, 2015
+
+patents:
+  - title: Vehicle License Plate Recognition System
+    inventors: Younkwan Lee, Moongu Jeon
+    number: KR 10-2021-0001849 (filed Jan 2021)
+  - title: Access Control System Using Continual-Learning-Based Face Recognition
+    inventors: Younkwan Lee, Moongu Jeon
+    number: KR 10-2021-0001850 (filed Jan 2021)
+  - title: Rain Removal System for Images
+    inventors: Younkwan Lee, Hyeongjun Yoo, Moongu Jeon
+    number: KR 10-2020-0108866 (filed Dec 2020)
+  - title: Apparatus and Method for Learning Video Images
+    inventors: Geunshin Lee, Jongsun Lee, Moongu Jeon, Younkwan Lee
+    number: KR 10-2119687 (registered Jun 2020)
+  - title: Image Enhancement Apparatus
+    inventors: Geunshin Lee, Jongsun Lee, Moongu Jeon, Younkwan Lee
+    number: KR 10-2124497 (registered Jun 2020)
+  - title: Action Recognition Method and Apparatus
+    inventors: Yongsang Yoon, Moongu Jeon, Jongmin Yu, Younkwan Lee
+    number: KR 10-2019-0123041 (filed Oct 2019)
+  - title: Vehicle Recognition System
+    inventors: Younkwan Lee, Moongu Jeon
+    number: KR 10-2082254 (registered Feb 2020)
