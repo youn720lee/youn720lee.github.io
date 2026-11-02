@@ -220,20 +220,22 @@
         <button type="button" class="btn btn-primary" id="pub-reset">Show all publications</button>
       </div>
 
-      {% if domestic %}
+      {% macro collapsed_list(title, items) %}
       <details class="domestic">
-        <summary><span>Domestic conference papers (Korea)</span><span class="count">{{ domestic | length }}</span></summary>
+        <summary><span>{{ title }}</span><span class="count">{{ items | length }}</span></summary>
         <ol class="domestic-list">
-          {% for p in domestic %}
+          {% for p in items %}
           <li>
-            <span class="d-title">{{ p.title }}</span>
+            <span class="d-title">{% set link = p.links.paper or p.links.doi or p.links.arxiv %}{% if link %}<a href="{{ link }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>
             <span class="d-authors">{% for a in p.authors %}{% if a == self_name %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span>
             <span class="d-venue">{{ p.venue }}{% if p.pages %}, pp. {{ p.pages }}{% endif %}, {{ p.year }}.{% if p.award %} <span class="badge badge-award"><svg class="icon"><use href="#i-trophy"/></svg>{{ p.award }}</span>{% endif %}</span>
           </li>
           {% endfor %}
         </ol>
       </details>
-      {% endif %}
+      {% endmacro %}
+      {% if other_intl %}{{ collapsed_list("Other international conference papers", other_intl) }}{% endif %}
+      {% if domestic %}{{ collapsed_list("Domestic conference papers (Korea)", domestic) }}{% endif %}
     </div>
   </section>
 

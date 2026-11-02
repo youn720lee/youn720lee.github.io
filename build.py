@@ -173,9 +173,14 @@ def main() -> None:
         p["type_label"] = TYPE_LABEL.get(p["type"], p["type"].title())
         p["is_first_author"] = bool(p["authors"]) and p["authors"][0] == self_name
         p["bibtex"] = bibtex(p)
-        p["venue_html"] = venue_html(p["venue"])
+        if p.get("venue_short") and p["venue_short"] == p["venue"]:
+            p["venue_html"] = f'<strong class="acr">{html.escape(p["venue"])}</strong>'
+        else:
+            p["venue_html"] = venue_html(p["venue"])
         p["note_html"] = note_html(p["note"]) if p.get("note") else ""
-        if not p.get("image"):
+        if p["type"] == "domestic" or p.get("collapsed"):
+            p["image"] = ""
+        elif not p.get("image"):
             # Use assets/pubs/<key>.(jpg|png|webp|gif) when present, otherwise a venue tile.
             for ext in ("jpg", "jpeg", "png", "webp", "gif"):
                 cand = ROOT / "assets" / "pubs" / f"{p['key']}.{ext}"
@@ -188,7 +193,8 @@ def main() -> None:
         p["search"] = " ".join([p["title"], " ".join(p["authors"]), p["venue"], str(p["year"]), p.get("venue_short", "")]).lower()
 
     pubs.sort(key=lambda p: -int(p["year"]))  # stable: keeps file order within a year
-    international = [p for p in pubs if p["type"] != "domestic"]
+    international = [p for p in pubs if p["type"] != "domestic" and not p.get("collapsed")]
+    other_intl = [p for p in pubs if p["type"] != "domestic" and p.get("collapsed")]
     domestic = [p for p in pubs if p["type"] == "domestic"]
 
     years = []
@@ -197,7 +203,7 @@ def main() -> None:
             years.append({"year": p["year"], "pubs": []})
         years[-1]["pubs"].append(p)
 
-    counts = {t: sum(1 for p in pubs if p["type"] == t) for t in TYPE_LABEL}
+    counts = {t: sum(1 for p in international if p["type"] == t) for t in TYPE_LABEL}
     counts["selected"] = sum(1 for p in pubs if p.get("selected"))
     counts["all"] = len(international)
 
@@ -216,6 +222,7 @@ def main() -> None:
         profile=profile,
         years=years,
         domestic=domestic,
+        other_intl=other_intl,
         projects=projects,
         counts=counts,
         self_name=self_name,
@@ -224,7 +231,7 @@ def main() -> None:
         year_now=_dt.date.today().year,
     )
     (ROOT / "index.html").write_text(out, encoding="utf-8")
-    print(f"index.html written — {len(international)} international + {len(domestic)} domestic publications, {len(projects)} projects")
+    print(f"index.html written — {len(international)} main + {len(other_intl)} other international + {len(domestic)} domestic publications, {len(projects)} projects")
 
 
 if __name__ == "__main__":

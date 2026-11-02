@@ -268,7 +268,7 @@
 - key: choi2020blockchange
   title: Block Change Learning for Knowledge Distillation
   authors: [Hyunguk Choi, Younkwan Lee, Kin Choong Yow, Moongu Jeon]
-  venue: Information Sciences
+  venue: Information Sciences (Inf. Sci.)
   venue_short: Inf. Sci.
   year: 2020
   type: journal
@@ -319,6 +319,7 @@
   authors: [Juhyun Lee, Yoojin Hong, Younkwan Lee, Hyun Soo Kim, Chul Han Song, Du Yong Kim, Moongu Jeon]
   venue: International Conference on Signal Processing and Communication Systems (ICSPCS)
   venue_short: ICSPCS
+  collapsed: true          # listed under 'Other international conference papers'
   year: 2019
   type: conference
   pages: 1–7
@@ -330,6 +331,7 @@
   authors: [Younkwan Lee, Jaewoong Yun, Yoojin Hong, Juhyun Lee, Moongu Jeon]
   venue: IEEE International Conference on Consumer Electronics – Asia (ICCE-Asia)
   venue_short: ICCE-Asia
+  collapsed: true          # listed under 'Other international conference papers'
   year: 2018
   type: conference
   pages: 1–4
@@ -340,6 +342,7 @@
   authors: [Quang Vinh Dinh, Younkwan Lee, Hyunguk Choi, Moongu Jeon]
   venue: IEEE International Conference on Consumer Electronics – Asia (ICCE-Asia)
   venue_short: ICCE-Asia
+  collapsed: true          # listed under 'Other international conference papers'
   year: 2018
   type: conference
   links: {}
@@ -349,6 +352,7 @@
   authors: [Younkwan Lee, Jongmin Yu, Moongu Jeon]
   venue: International Conference on Control, Automation and Information Sciences (ICCAIS)
   venue_short: ICCAIS
+  collapsed: true          # listed under 'Other international conference papers'
   year: 2017
   type: conference
   pages: 175–180

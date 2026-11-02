@@ -43,7 +43,7 @@ Append an entry to `data/publications.yml`:
   venue_short: CVPR               # label on the auto-generated tile
   year: 2027
   type: conference                # journal | conference | workshop | preprint | domestic
-  selected: true                  # optional: show under the "Selected" filter
+  collapsed: true                 # optional: list it in the folded 'Other international conference papers' block
   award: Best Paper Award         # optional
   tags: [Oral]                    # optional badges
   pages: 1–10                     # optional; volume / number also supported

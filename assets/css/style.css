@@ -261,7 +261,7 @@ a.pub-thumb:hover img { transform: scale(1.03); }
 .empty { color: var(--muted); text-align: center; padding: 40px 0; }
 .pub.is-hidden, .year-group.is-hidden { display: none; }
 
-.domestic { margin-top: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.domestic { margin-top: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
 .domestic summary { cursor: pointer; padding: 14px 18px; font-weight: 700; display: flex; align-items: center; justify-content: space-between; list-style: none; }
 .domestic summary::-webkit-details-marker { display: none; }
 .domestic summary::after { content: "+"; font-size: 1.3rem; color: var(--muted); margin-left: 12px; }
@@ -445,3 +445,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 .proj-bullets li { margin-bottom: 2px; }
 .proj-bullets li::marker { color: var(--accent); }
 .proj .tags { margin: 2px 0 4px; }
+
+.domestic + .domestic { margin-top: 8px; }
+.d-title a { color: var(--fg); }
+.d-title a:hover { color: var(--accent-ink); }
