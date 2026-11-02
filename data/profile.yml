@@ -92,7 +92,7 @@ news:
   - date: 2026-01
     text: I join the AI Inspection Technology Group at Samsung Electronics, working on vision foundation models for inspection.
   - date: 2025
-    text: "<em>HDO: Hierarchical Defect Ontology for Vision Inspection</em> receives an Honorable Mention at the <strong>Samsung Best Paper Awards (SBPA)</strong>."
+    text: "<em>HDO: Hierarchical Defect Ontology for Open-Vocabulary Defect Detection</em> receives a <strong>Merit Award</strong> (top 4.6%) at the Samsung Best Paper Awards (SBPA)."
   - date: 2024-10
     text: Our vision inspection foundation model wins the <strong>Grand Prize</strong> at the Samsung IT Innovation Awards (SIIA), selected across the entire Samsung Group.
   - date: 2024-07
@@ -108,9 +108,9 @@ awards:
     by: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026) · Jun 2026
     link: assets/img/cvpr2026-outstanding-reviewer.jpg
   - year: 2025
-    title: Samsung Best Paper Awards (SBPA) — Honorable Mention
-    by: Samsung Electronics · 2025
-    note: "HDO: Hierarchical Defect Ontology for Vision Inspection"
+    title: Samsung Best Paper Awards (SBPA) — Merit Award
+    by: Samsung Electronics · 2025 · top 4.6% of submissions
+    note: "HDO: Hierarchical Defect Ontology for Open-Vocabulary Defect Detection (Younkwan Lee, Byeongeun Ko, Eungi Hong)"
   - year: 2024
     title: Samsung IT Innovation Awards (SIIA) — Grand Prize
     by: Samsung Group (group-wide competition) · Oct 2024
