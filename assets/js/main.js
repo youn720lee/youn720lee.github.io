@@ -160,7 +160,7 @@
   }
 
   /* --------------------------------------------- active nav highlighting */
-  var sections = $$('main section[id]');
+  var sections = $$('main section[id], main [data-nav][id]');
   var links = $$('.nav-links a[href^="#"]');
   if ('IntersectionObserver' in window && sections.length && links.length) {
     var current = null;

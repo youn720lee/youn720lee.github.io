@@ -396,3 +396,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 
 /* Hide the browser's own clear button; the page provides one. */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; appearance: none; }
+
+/* ------------------------------------------------------------------ news + experience side by side */
+.two-col { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 20px 48px; align-items: start; }
+.two-col .h2 { font-size: 1.35rem; margin-bottom: 14px; }
+.two-col .news li { grid-template-columns: 66px 1fr; gap: 10px; font-size: 0.9rem; }
+.two-col .timeline { padding-left: 22px; }
+.two-col .tl-dot { left: -22px; width: 14px; height: 14px; }
+.two-col .tl-head { flex-direction: column; gap: 0; }
+.two-col .tl-dates { font-size: 0.82rem; }
+.two-col .tl-org { font-size: 0.9rem; }
+.two-col .tl-bullets { font-size: 0.86rem; }
+@media (max-width: 960px) {
+  .two-col { grid-template-columns: 1fr; gap: 28px; }
+}

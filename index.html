@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=d0e2d692">
+  <link rel="stylesheet" href="assets/css/style.css?v=3332467a">
   <script>
     // Apply the saved theme before first paint to avoid a flash.
     (function () { try { var t = localStorage.getItem('theme'); if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.setAttribute('data-theme', 'dark'); } } catch (e) {} })();
@@ -110,73 +110,73 @@
     </div>
   </section>
 
-  <!-- ======================= NEWS ======================= -->
+  <!-- ======================= NEWS + WORK EXPERIENCE ======================= -->
   <section id="news" class="section section-compact section-alt">
-    <div class="container">
-      <h2 class="h2">News</h2>
-      <ul class="news" id="news-list">
-        <li><span class="news-date">2026-10</span><span class="news-text">Our line segment detection paper <em>Not All Lines Are Equal</em> is accepted to <strong>WACV 2027</strong>.</span></li>
-        <li><span class="news-date">2026-10</span><span class="news-text">Our DX AI Vision Platform Data Agent wins the <strong>Annual Award</strong> of the AI Inspection Technology Group, Samsung Electronics.</span></li>
-        <li><span class="news-date">2026-06</span><span class="news-text">I am selected as an <strong>Outstanding Reviewer</strong> of CVPR 2026.</span></li>
-        <li class="news-more" hidden><span class="news-date">2026-02</span><span class="news-text"><em>Anomaly as Non-Conformity</em>, a training-free anomaly detection method, is accepted to <strong>CVPR 2026</strong>.</span></li>
-        <li class="news-more" hidden><span class="news-date">2026-01</span><span class="news-text">I join the AI Inspection Technology Group at Samsung Electronics, working on vision foundation models for inspection.</span></li>
-        <li class="news-more" hidden><span class="news-date">2025</span><span class="news-text"><em>HDO: Hierarchical Defect Ontology for Open-Vocabulary Defect Detection</em> receives a <strong>Merit Award</strong> (top 4.6%) at the Samsung Best Paper Awards (SBPA).</span></li>
-        <li class="news-more" hidden><span class="news-date">2024-10</span><span class="news-text">Our vision inspection foundation model wins the <strong>Grand Prize</strong> at the Samsung IT Innovation Awards (SIIA), selected across the entire Samsung Group.</span></li>
-        <li class="news-more" hidden><span class="news-date">2024-07</span><span class="news-text"><em>Self-Supervised Industrial Image Generation for Defect Recognition Under Limited Data</em> receives the <strong>Best Paper Runner-Up Award</strong> at IEEE AVSS 2024.</span></li>
-      </ul>
-      <button type="button" class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="news-list">Show 5 more</button>
-    </div>
-  </section>
+    <div class="container two-col">
+      <div class="col col-news">
+        <h2 class="h2">News</h2>
+        <ul class="news" id="news-list">
+          <li><span class="news-date">2026-10</span><span class="news-text">Our line segment detection paper <em>Not All Lines Are Equal</em> is accepted to <strong>WACV 2027</strong>.</span></li>
+          <li><span class="news-date">2026-10</span><span class="news-text">Our DX AI Vision Platform Data Agent wins the <strong>Annual Award</strong> of the AI Inspection Technology Group, Samsung Electronics.</span></li>
+          <li><span class="news-date">2026-06</span><span class="news-text">I am selected as an <strong>Outstanding Reviewer</strong> of CVPR 2026.</span></li>
+          <li class="news-more" hidden><span class="news-date">2026-02</span><span class="news-text"><em>Anomaly as Non-Conformity</em>, a training-free anomaly detection method, is accepted to <strong>CVPR 2026</strong>.</span></li>
+          <li class="news-more" hidden><span class="news-date">2026-01</span><span class="news-text">I join the AI Inspection Technology Group at Samsung Electronics, working on vision foundation models for inspection.</span></li>
+          <li class="news-more" hidden><span class="news-date">2025</span><span class="news-text"><em>HDO: Hierarchical Defect Ontology for Open-Vocabulary Defect Detection</em> receives a <strong>Merit Award</strong> (top 4.6%) at the Samsung Best Paper Awards (SBPA).</span></li>
+          <li class="news-more" hidden><span class="news-date">2024-10</span><span class="news-text">Our vision inspection foundation model wins the <strong>Grand Prize</strong> at the Samsung IT Innovation Awards (SIIA), selected across the entire Samsung Group.</span></li>
+          <li class="news-more" hidden><span class="news-date">2024-07</span><span class="news-text"><em>Self-Supervised Industrial Image Generation for Defect Recognition Under Limited Data</em> receives the <strong>Best Paper Runner-Up Award</strong> at IEEE AVSS 2024.</span></li>
+        </ul>
+        <button type="button" class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="news-list">Show 5 more</button>
 
-  <!-- ======================= WORK EXPERIENCE ======================= -->
-  <section id="experience" class="section section-compact">
-    <div class="container">
-      <h2 class="h2">Work Experience</h2>
-      <ol class="timeline">
-        <li class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-head">
-              <h3 class="tl-title">Staff Engineer</h3>
-              <span class="tl-dates">Jan 2026 – Present</span>
+      </div>
+      <div class="col col-exp" id="experience" data-nav>
+        <h2 class="h2">Work Experience</h2>
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-title">Staff Engineer</h3>
+                <span class="tl-dates">Jan 2026 – Present</span>
+              </div>
+              <div class="tl-org">Samsung Electronics — AI Inspection Technology Group, Global Technology Research (GTR) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Suwon, Korea</span></div>
+              <ul class="tl-bullets"><li>Vision Foundation Model (VFM) research for manufacturing visual inspection (Smart Factory Vision).</li><li>DX AI Vision Platform and its data agent for deploying inspection models across production lines.</li></ul>
             </div>
-            <div class="tl-org">Samsung Electronics — AI Inspection Technology Group, Global Technology Research (GTR) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Suwon, Korea</span></div>
-            <ul class="tl-bullets"><li>Vision Foundation Model (VFM) research for manufacturing visual inspection (Smart Factory Vision).</li><li>DX AI Vision Platform and its data agent for deploying inspection models across production lines.</li></ul>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-head">
-              <h3 class="tl-title">Staff Engineer</h3>
-              <span class="tl-dates">Mar 2022 – Dec 2025</span>
+          </li>
+          <li class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-title">Staff Engineer</h3>
+                <span class="tl-dates">Mar 2022 – Dec 2025</span>
+              </div>
+              <div class="tl-org">Samsung Electronics — Global Technology Research (GTR) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Suwon, Korea</span></div>
+              <ul class="tl-bullets"><li>Foundation-model-based vision inspection technology (Samsung IT Innovation Awards Grand Prize, 2024).</li></ul>
             </div>
-            <div class="tl-org">Samsung Electronics — Global Technology Research (GTR) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Suwon, Korea</span></div>
-            <ul class="tl-bullets"><li>Foundation-model-based vision inspection technology (Samsung IT Innovation Awards Grand Prize, 2024).</li></ul>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-head">
-              <h3 class="tl-title">Ph.D. Candidate</h3>
-              <span class="tl-dates">2016 – 2022</span>
+          </li>
+          <li class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-title">Ph.D. Candidate</h3>
+                <span class="tl-dates">2016 – 2022</span>
+              </div>
+              <div class="tl-org">Machine Learning and Vision Laboratory, GIST <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Gwangju, Korea</span></div>
+              <ul class="tl-bullets"><li>Robust perception for autonomous driving and surveillance — weather-robust enhancement, license plate recognition, lane detection, and anomaly detection.</li></ul>
             </div>
-            <div class="tl-org">Machine Learning and Vision Laboratory, GIST <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Gwangju, Korea</span></div>
-            <ul class="tl-bullets"><li>Robust perception for autonomous driving and surveillance — weather-robust enhancement, license plate recognition, lane detection, and anomaly detection.</li></ul>
-          </div>
-        </li>
-        <li class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-head">
-              <h3 class="tl-title">Software Engineering Intern</h3>
-              <span class="tl-dates">Jul 2014 – Dec 2014</span>
+          </li>
+          <li class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-title">Software Engineering Intern</h3>
+                <span class="tl-dates">Jul 2014 – Dec 2014</span>
+              </div>
+              <div class="tl-org">Microsoft (Global Intern Program) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Seoul, Korea</span></div>
             </div>
-            <div class="tl-org">Microsoft (Global Intern Program) <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>Seoul, Korea</span></div>
-          </div>
-        </li>
-      </ol>
+          </li>
+        </ol>
+
+      </div>
     </div>
   </section>
 
@@ -1239,6 +1239,6 @@ Quang Vinh Dinh, <strong>Younkwan Lee</strong>, Hyunguk Choi, Moongu Jeon       
   </div>
 </dialog>
 
-<script src="assets/js/main.js?v=b8bcfe4e"></script>
+<script src="assets/js/main.js?v=20db2b97"></script>
 </body>
 </html>

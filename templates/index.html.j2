@@ -131,44 +131,42 @@
     </div>
   </section>
 
-  {% if profile.news %}
-  <!-- ======================= NEWS ======================= -->
+  <!-- ======================= NEWS + WORK EXPERIENCE ======================= -->
   <section id="news" class="section section-compact section-alt">
-    <div class="container">
-      <h2 class="h2">News</h2>
-      <ul class="news" id="news-list">
-        {% for n in profile.news %}
-        <li{% if loop.index > 3 %} class="news-more" hidden{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text">{{ n.text | safe }}</span></li>
-        {% endfor %}
-      </ul>
-      {% if profile.news | length > 3 %}
-      <button type="button" class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="news-list">Show {{ profile.news | length - 3 }} more</button>
-      {% endif %}
-    </div>
-  </section>
-  {% endif %}
+    <div class="container two-col">
+      <div class="col col-news">
+        <h2 class="h2">News</h2>
+        <ul class="news" id="news-list">
+          {% for n in profile.news %}
+          <li{% if loop.index > 3 %} class="news-more" hidden{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text">{{ n.text | safe }}</span></li>
+          {% endfor %}
+        </ul>
+        {% if profile.news | length > 3 %}
+        <button type="button" class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="news-list">Show {{ profile.news | length - 3 }} more</button>
+        {% endif %}
 
-  <!-- ======================= WORK EXPERIENCE ======================= -->
-  <section id="experience" class="section section-compact">
-    <div class="container">
-      <h2 class="h2">Work Experience</h2>
-      <ol class="timeline">
-        {% for x in profile.experience %}
-        <li class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-head">
-              <h3 class="tl-title">{{ x.title }}</h3>
-              <span class="tl-dates">{{ x.start }} – {{ x.end }}</span>
+      </div>
+      <div class="col col-exp" id="experience" data-nav>
+        <h2 class="h2">Work Experience</h2>
+        <ol class="timeline">
+          {% for x in profile.experience %}
+          <li class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <h3 class="tl-title">{{ x.title }}</h3>
+                <span class="tl-dates">{{ x.start }} – {{ x.end }}</span>
+              </div>
+              <div class="tl-org">{{ x.org }}{% if x.location %} <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>{{ x.location }}</span>{% endif %}</div>
+              {% if x.bullets %}
+              <ul class="tl-bullets">{% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+              {% endif %}
             </div>
-            <div class="tl-org">{{ x.org }}{% if x.location %} <span class="tl-loc"><svg class="icon"><use href="#i-pin"/></svg>{{ x.location }}</span>{% endif %}</div>
-            {% if x.bullets %}
-            <ul class="tl-bullets">{% for b in x.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
-            {% endif %}
-          </div>
-        </li>
-        {% endfor %}
-      </ol>
+          </li>
+          {% endfor %}
+        </ol>
+
+      </div>
     </div>
   </section>
 
