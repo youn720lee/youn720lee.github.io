@@ -87,6 +87,7 @@
   pages: 229–235
   links:
     doi: https://doi.org/10.1016/j.patrec.2024.10.007
+    code: https://github.com/andrewyu90/ADDM
 
 - key: lee2024selfsupervised
   title: Self-Supervised Industrial Image Generation for Defect Recognition Under Limited Data
@@ -138,6 +139,7 @@
   pages: 14908–14921
   links:
     doi: https://doi.org/10.1109/TITS.2021.3135015
+    code: https://github.com/brightyoun/TITS-LPST
 
 - key: ko2022pinet
   title: Key Points Estimation and Point Instance Segmentation Approach for Lane Detection
@@ -192,6 +194,7 @@
   links:
     doi: https://doi.org/10.1016/j.patrec.2021.07.017
     arxiv: https://arxiv.org/abs/2009.02189
+    code: https://github.com/unique-chan/Complement-Cross-Entropy
 
 - key: lee2021rain
   title: Learning to See in the Rain via Disentangled Representation
@@ -203,6 +206,7 @@
   selected: true
   links:
     paper: https://ieeexplore.ieee.org/document/9565370
+    code: https://github.com/brightyoun/Rain-VV
 
 - key: lee2021taskdriven
   title: Task-Driven Deep Image Enhancement Network for Autonomous Driving in Bad Weather
@@ -241,6 +245,7 @@
   links:
     doi: https://doi.org/10.1109/IV47402.2020.9304708
     arxiv: https://arxiv.org/abs/2004.01351
+    code: https://github.com/brightyoun/MTL_TSR
 
 - key: yu2020roaddefect
   title: Unsupervised Pixel-level Road Defect Detection via Adversarial Image-to-Frequency Transform
@@ -253,6 +258,7 @@
   links:
     doi: https://doi.org/10.1109/IV47402.2020.9304843
     arxiv: https://arxiv.org/abs/2001.11175
+    code: https://github.com/andrewyu90/Adversarial_IFTN
 
 - key: lee2020attribute
   title: Self-Supervised Attribute-Aware Refinement Network for Low-Quality Text Recognition
@@ -313,6 +319,7 @@
   links:
     doi: https://doi.org/10.5220/0007378300680076
     arxiv: https://arxiv.org/abs/1910.04324
+    code: https://github.com/brightyoun/LPSR-Recognition
 
 - key: lee2019pm25
   title: Empirical Analysis of Tree-Based Models for PM2.5 Concentration Prediction
